@@ -1,5 +1,7 @@
 # Mark2
 
+> This repository does not contain the Mark2 editor source code. It is maintained for the official website, user documentation, and issue tracking.
+
 [简体中文](README.zh-CN.md)
 
 Mark2 is a desktop Markdown editor for macOS. It keeps writing, review, versioning, and export in one focused workspace.
@@ -17,7 +19,7 @@ Mark2 is a desktop Markdown editor for macOS. It keeps writing, review, versioni
 
 ## Download
 
-Mark2 currently supports macOS. Open the [latest Mark2 release](https://github.com/hzjjg/mark2-editor-release/releases/latest), then choose the installer for your Mac:
+Mark2 currently supports macOS. Open the [latest Mark2 release](https://github.com/mark2-editor/mark2/releases/latest), then choose the installer for your Mac:
 
 - **Apple silicon (M1, M2, M3, or M4):** `mark2_<version>_aarch64.dmg`
 - **Intel:** `mark2_<version>_x64.dmg`

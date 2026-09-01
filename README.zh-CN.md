@@ -1,5 +1,7 @@
 # Mark2
 
+> 本仓库不包含 Mark2 编辑器源代码，仅用于维护官网、用户文档和 Issue。
+
 [English](README.md)
 
 Mark2 是一款适用于 macOS 的桌面 Markdown 编辑器，将写作、审阅、版本管理和导出整合在同一个工作区中。
@@ -17,7 +19,7 @@ Mark2 是一款适用于 macOS 的桌面 Markdown 编辑器，将写作、审阅
 
 ## 下载
 
-Mark2 当前支持 macOS。请前往 [最新 Mark2 版本](https://github.com/hzjjg/mark2-editor-release/releases/latest)，并根据 Mac 芯片选择安装包：
+Mark2 当前支持 macOS。请前往 [最新 Mark2 版本](https://github.com/mark2-editor/mark2/releases/latest)，并根据 Mac 芯片选择安装包：
 
 - **Apple 芯片（M1、M2、M3 或 M4）**：`mark2_<version>_aarch64.dmg`
 - **Intel 芯片**：`mark2_<version>_x64.dmg`

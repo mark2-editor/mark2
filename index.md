@@ -42,7 +42,7 @@ function themeImage(darkSrc: string, lightSrc: string) {
       <h1 id="hero-title">A Markdown editor<br /><em>for focused work.</em></h1>
       <p class="mark2-hero-lede">Mark2 combines visual editing, source mode, AI assistance, Git versioning, local history, and PDF export in one focused desktop app.</p>
       <div class="mark2-hero-actions">
-        <a class="mark2-button mark2-button-primary" href="https://github.com/hzjjg/mark2-editor-release/releases" target="_blank" rel="noopener noreferrer">Download Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a>
+        <a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer">Download Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a>
         <a class="mark2-button mark2-button-quiet" :href="withBase('/docs/')">Read the docs <ArrowRight :size="16" :stroke-width="1.8" aria-hidden="true" /></a>
       </div>
       <div class="mark2-platform-line"><span class="mark2-status-dot" aria-hidden="true"></span> Currently available for macOS only</div>
@@ -98,7 +98,7 @@ function themeImage(darkSrc: string, lightSrc: string) {
   </section>
   <section class="mark2-section mark2-final-section" id="download" aria-labelledby="download-title">
     <h2 id="download-title">Start with your next<br /><em>Markdown document.</em></h2>
-    <div class="mark2-final-actions"><a class="mark2-button mark2-button-primary" href="https://github.com/hzjjg/mark2-editor-release/releases" target="_blank" rel="noopener noreferrer">Download Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a><a class="mark2-button mark2-button-quiet" :href="withBase('/docs/')">Read the help docs <ArrowRight :size="16" :stroke-width="1.8" aria-hidden="true" /></a></div>
+    <div class="mark2-final-actions"><a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer">Download Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a><a class="mark2-button mark2-button-quiet" :href="withBase('/docs/')">Read the help docs <ArrowRight :size="16" :stroke-width="1.8" aria-hidden="true" /></a></div>
   </section>
   <Mark2ImageLightbox ref="lightbox" close-label="Close image" />
   <footer class="mark2-home-footer"><div class="mark2-footer-brand"><span class="mark2-brand-glyph mark2-brand-image" aria-hidden="true"><img src="/mark2-icon.png" alt="" /></span><span>mark2</span></div><div class="mark2-footer-meta"><span>Markdown editor for focused work.</span><span>© 2026 Mark2</span></div></footer>

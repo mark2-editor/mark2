@@ -42,7 +42,7 @@ function themeImage(darkSrc: string, lightSrc: string) {
       <h1 id="hero-title">专注写作的<br />Markdown 编辑器。</h1>
       <p class="mark2-hero-lede">在一个桌面应用中完成 Markdown 文档的编辑、审阅、版本管理和导出，并在需要时使用 AI 辅助写作。</p>
       <div class="mark2-hero-actions">
-        <a class="mark2-button mark2-button-primary" href="https://github.com/hzjjg/mark2-editor-release/releases" target="_blank" rel="noopener noreferrer">下载 Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a>
+        <a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer">下载 Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a>
         <a class="mark2-button mark2-button-quiet" :href="withBase('/zh/docs/')">阅读帮助文档 <ArrowRight :size="16" :stroke-width="1.8" aria-hidden="true" /></a>
       </div>
       <div class="mark2-platform-line"><span class="mark2-status-dot" aria-hidden="true"></span> 暂时仅支持 macOS</div>
@@ -98,7 +98,7 @@ function themeImage(darkSrc: string, lightSrc: string) {
   </section>
   <section class="mark2-section mark2-final-section" id="download" aria-labelledby="download-title">
     <h2 id="download-title">从你的下一篇<br /><em>Markdown 文档开始。</em></h2>
-    <div class="mark2-final-actions"><a class="mark2-button mark2-button-primary" href="https://github.com/hzjjg/mark2-editor-release/releases" target="_blank" rel="noopener noreferrer">下载 Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a><a class="mark2-button mark2-button-quiet" :href="withBase('/zh/docs/')">阅读帮助文档 <ArrowRight :size="16" :stroke-width="1.8" aria-hidden="true" /></a></div>
+    <div class="mark2-final-actions"><a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer">下载 Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a><a class="mark2-button mark2-button-quiet" :href="withBase('/zh/docs/')">阅读帮助文档 <ArrowRight :size="16" :stroke-width="1.8" aria-hidden="true" /></a></div>
   </section>
   <Mark2ImageLightbox ref="lightbox" close-label="关闭图片" />
   <footer class="mark2-home-footer"><div class="mark2-footer-brand"><span class="mark2-brand-glyph mark2-brand-image" aria-hidden="true"><img src="/mark2-icon.png" alt="" /></span><span>mark2</span></div><div class="mark2-footer-meta"><span>专注写作的 Markdown 编辑器。</span><span>© 2026 Mark2</span></div></footer>

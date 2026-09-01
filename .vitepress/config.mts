@@ -1,12 +1,15 @@
 import { defineConfig } from 'vitepress'
 
+const base = process.env.VITEPRESS_BASE ?? '/'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base,
   title: 'Mark2',
   description: 'A calm, capable Markdown editor for focused work.',
   cleanUrls: true,
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/mark2-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: `${base}mark2-icon.png` }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { name: 'twitter:card', content: 'summary' }]
   ],

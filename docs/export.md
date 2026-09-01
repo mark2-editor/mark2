@@ -18,7 +18,7 @@ You can also copy the original Markdown or formatted rich text from the editor m
 
 PDF export uses the page as you see it in Mark2, including headings, tables, code, images, math, and Mermaid diagrams when they are present.
 
-<figure class="mark2-doc-shot-single"><img src="/mark2-export-pdf.png" alt="A PDF exported from Mark2 and opened in Preview." /><figcaption>A rendered Mark2 document exported as a PDF with a table of contents.</figcaption></figure>
+<Mark2DocImage src="/mark2-export-pdf.png" alt="A PDF exported from Mark2 and opened in Preview." caption="A rendered Mark2 document exported as a PDF with a table of contents." />
 
 Before exporting, open **Settings → Export** if you want to change:
 

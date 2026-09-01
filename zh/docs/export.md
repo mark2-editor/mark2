@@ -18,7 +18,7 @@ description: 将 Mark2 文档导出为 PDF、PNG、HTML 或 Markdown。
 
 PDF 会按照 Mark2 中看到的页面导出，包括标题、表格、代码、图片、数学公式和 Mermaid 图表等内容。
 
-<figure class="mark2-doc-shot-single"><img src="/mark2-export-pdf.png" alt="从 Mark2 导出的 PDF 在 Preview 中打开。" /><figcaption>Mark2 将渲染后的文档导出为带目录的 PDF。</figcaption></figure>
+<Mark2DocImage src="/mark2-export-pdf.png" alt="从 Mark2 导出的 PDF 在 Preview 中打开。" caption="Mark2 将渲染后的文档导出为带目录的 PDF。" />
 
 导出前，可以打开“设置 → 导出”调整：
 

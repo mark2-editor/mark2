@@ -12,7 +12,7 @@ Mark2 has two ways to work with the same document:
 
 You can switch between them without creating a second copy of the document.
 
-<figure class="mark2-doc-shot-single"><img src="/mark2-editor-basics-dark.png" alt="Mark2 editor showing a rendered Markdown document in dark mode." /><figcaption>A real Mark2 document in the visual editor, with formatting and navigation close at hand.</figcaption></figure>
+<Mark2DocImage dark-src="/mark2-editor-basics-dark.png" light-src="/mark2-editor-light.png" alt="Mark2 editor showing a rendered Markdown document." caption="A real Mark2 document in the visual editor, with formatting and navigation close at hand." />
 
 ## Write and format
 

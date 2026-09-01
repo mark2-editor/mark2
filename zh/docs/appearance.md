@@ -11,7 +11,7 @@ description: 自定义 Mark2 的主题、字体、纹理、布局和自动保存
 
 Mark2 提供浅色主题：Light、Solarized Light、Crisp、Paper、Newsprint 和 Warm；也提供深色主题：Dark、Nord、Solarized Dark、Dracula、Monokai、One Dark、Gruvbox Dark 和 Catppuccin Mocha。
 
-<figure class="mark2-doc-shot-single"><img src="/mark2-settings-appearance.png" alt="Mark2 外观设置中展示主题、代码主题、字体、界面缩放和纹理选项。" /><figcaption>在外观设置中统一调整主题、字体、代码颜色和背景纹理。</figcaption></figure>
+<Mark2DocImage src="/mark2-settings-appearance.png" alt="Mark2 外观设置中展示主题、代码主题、字体、界面缩放和纹理选项。" caption="在外观设置中统一调整主题、字体、代码颜色和背景纹理。" />
 
 如果希望代码块使用另一套颜色，可以开启独立代码主题，再单独选择代码配色。
 
@@ -19,7 +19,7 @@ Mark2 提供浅色主题：Light、Solarized Light、Crisp、Paper、Newsprint �
 
 你可以选择编辑器字体、正文大小、代码字体和界面整体大小。可以直接使用内置预设，也可以填写自己喜欢的字体名称。背景纹理及其强弱也可以单独调整。
 
-<figure class="mark2-doc-shot-single"><img src="/mark2-appearance-paper.png" alt="Mark2 编辑器使用 Paper 主题展示渲染后的 Markdown 文档。" /><figcaption>Paper 主题应用到真实 Markdown 文档后的效果。</figcaption></figure>
+<Mark2DocImage src="/mark2-appearance-paper.png" alt="Mark2 编辑器使用 Paper 主题展示渲染后的 Markdown 文档。" caption="Paper 主题应用到真实 Markdown 文档后的效果。" />
 
 ## 调整写作布局
 

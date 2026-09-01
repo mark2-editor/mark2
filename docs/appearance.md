@@ -11,7 +11,7 @@ Open **Settings → Appearance** to make Mark2 feel comfortable, and **Settings 
 
 Mark2 includes light themes — Light, Solarized Light, Crisp, Paper, Newsprint, and Warm — and dark themes — Dark, Nord, Solarized Dark, Dracula, Monokai, One Dark, Gruvbox Dark, and Catppuccin Mocha.
 
-<figure class="mark2-doc-shot-single"><img src="/mark2-settings-appearance.png" alt="Mark2 Appearance settings showing theme, code theme, font, scale, and texture options." /><figcaption>Appearance settings bring themes, fonts, code colors, and texture into one place.</figcaption></figure>
+<Mark2DocImage src="/mark2-settings-appearance.png" alt="Mark2 Appearance settings showing theme, code theme, font, scale, and texture options." caption="Appearance settings bring themes, fonts, code colors, and texture into one place." />
 
 If you prefer a different look for code blocks, turn on the independent code theme option and choose a code color scheme separately.
 
@@ -19,7 +19,7 @@ If you prefer a different look for code blocks, turn on the independent code the
 
 You can choose the editor font, editor text size, code font, and overall interface size. Built-in presets are available, and you can enter a custom font name if you already have one in mind. Background texture and its strength can also be adjusted.
 
-<figure class="mark2-doc-shot-single"><img src="/mark2-appearance-paper.png" alt="Mark2 editor displaying a rendered Markdown document in the Paper theme." /><figcaption>The Paper theme applied to a real Markdown document.</figcaption></figure>
+<Mark2DocImage src="/mark2-appearance-paper.png" alt="Mark2 editor displaying a rendered Markdown document in the Paper theme." caption="The Paper theme applied to a real Markdown document." />
 
 ## Change the writing layout
 

@@ -7,6 +7,8 @@ description: Configure Mark2 AI, use Agent, and enable inline completion.
 
 Mark2 has two AI tools: **AI Agent** helps with a complete request, while **inline completion** offers a short suggestion as you write. Both are optional.
 
+<Mark2DocImage dark-src="/mark2-agent-dark.png" light-src="/mark2-agent-light.png" alt="Mark2 Agent reviewing a Markdown draft beside the editor." caption="Agent can work beside the document while you keep the draft in view." />
+
 ## A quick explanation of the terms
 
 - A **provider** is the company or service that supplies the AI.

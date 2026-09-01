@@ -19,6 +19,53 @@ Mark2 is a desktop Markdown editor for macOS. It keeps writing, review, versioni
 
 ![Mark2 editor showing a rendered Markdown document](./public/mark2-editor-dark.png)
 
+## Main features
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Visual and source editing</h3>
+      <p>Write on a rendered page, then switch to source mode when you need precise control over the Markdown.</p>
+      <img src="./public/mark2-editor-basics-dark.png" alt="Mark2 visual editor showing a rendered Markdown document" width="100%" />
+      <p><a href="./docs/editor.md">Read the editor guide →</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>AI assistance</h3>
+      <p>Use Agent for rewrites, summaries, translations, and document questions while keeping the draft in view.</p>
+      <img src="./public/mark2-agent-dark.png" alt="Mark2 Agent reviewing a Markdown draft beside the editor" width="100%" />
+      <p><a href="./docs/ai.md">Read the AI guide →</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Local history</h3>
+      <p>Compare saved snapshots and restore an earlier draft without immediately replacing the file on disk.</p>
+      <img src="./public/mark2-history-draft-dark.png" alt="Mark2 comparing a saved version with a draft" width="100%" />
+      <p><a href="./docs/history.md">Read the history guide →</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Git workflow</h3>
+      <p>Review diffs, stage changes, create commits, and work with branches and remotes from one visual panel.</p>
+      <img src="./public/mark2-git-dark.png" alt="Mark2 Git panel showing changes and recent commits" width="100%" />
+      <p><a href="./docs/git.md">Read the Git guide →</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Document export</h3>
+      <p>Export PDF, PNG, HTML, or Markdown. PDF keeps headings, tables, code, math, and Mermaid diagrams.</p>
+      <img src="./public/mark2-export-pdf.png" alt="A PDF exported from Mark2 and opened in Preview" width="100%" />
+      <p><a href="./docs/export.md">Read the export guide →</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Appearance settings</h3>
+      <p>Choose the editor theme, code theme, fonts, interface scale, and background texture for comfortable sessions.</p>
+      <img src="./public/mark2-settings-appearance.png" alt="Mark2 Appearance settings showing theme and font controls" width="100%" />
+      <p><a href="./docs/appearance.md">Read the appearance guide →</a></p>
+    </td>
+  </tr>
+</table>
+
 ## Download
 
 Mark2 currently supports macOS. Open the [latest Mark2 release](https://github.com/mark2-editor/mark2/releases/latest), then choose the installer for your Mac:

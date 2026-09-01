@@ -101,5 +101,5 @@ function themeImage(darkSrc: string, lightSrc: string) {
     <div class="mark2-final-actions"><a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer">Download Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a><a class="mark2-button mark2-button-quiet" :href="withBase('/docs/')">Read the help docs <ArrowRight :size="16" :stroke-width="1.8" aria-hidden="true" /></a></div>
   </section>
   <Mark2ImageLightbox ref="lightbox" close-label="Close image" />
-  <footer class="mark2-home-footer"><div class="mark2-footer-brand"><span class="mark2-brand-glyph mark2-brand-image" aria-hidden="true"><img src="/mark2-icon.png" alt="" /></span><span>mark2</span></div><div class="mark2-footer-meta"><span>Markdown editor for focused work.</span><span>© 2026 Mark2</span></div></footer>
+  <footer class="mark2-home-footer"><div class="mark2-footer-brand"><span class="mark2-brand-glyph mark2-brand-image" aria-hidden="true"><img :src="withBase('/mark2-icon.png')" alt="" /></span><span>mark2</span></div><div class="mark2-footer-meta"><span>Markdown editor for focused work.</span><span>© 2026 Mark2</span></div></footer>
 </div>

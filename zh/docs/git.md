@@ -27,10 +27,7 @@ Git 是一种记录文件修改的工具。可以把它想成一个文件夹的�
 2. 暂存想要放进下一个检查点的文件或修改。
 3. 输入简短说明，选择 **Commit（提交）**。
 
-<div class="mark2-doc-shot-pair">
-  <figure><img src="/mark2-git-light.png" alt="Mark2 浅色主题下展示变更和最近提交的 Git 面板。" /><figcaption>浅色主题下查看变更和提交。</figcaption></figure>
-  <figure><img src="/mark2-git-dark.png" alt="Mark2 深色主题下展示变更和最近提交的 Git 面板。" /><figcaption>深色主题下的 Git 面板。</figcaption></figure>
-</div>
+<Mark2DocImage dark-src="/mark2-git-dark.png" light-src="/mark2-git-light.png" alt="Mark2 Git 面板展示变更和最近提交。" caption="不离开编辑器，也可以查看仓库变更和最近提交。" />
 
 Mark2 可以使用 AI 根据当前修改建议提交说明，你可以先检查并修改，再完成提交。
 

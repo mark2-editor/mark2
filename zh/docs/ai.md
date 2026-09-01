@@ -7,6 +7,8 @@ description: 配置 Mark2 AI，使用 Agent 和开启行内补全。
 
 Mark2 提供两种 AI 工具：**AI Agent** 用来完成一项完整的请求；**行内补全**则是在你写作时给出简短建议。两者都可以按需开启。
 
+<Mark2DocImage dark-src="/mark2-agent-dark.png" light-src="/mark2-agent-light.png" alt="Mark2 Agent 在编辑器旁审阅 Markdown 草稿。" caption="Agent 可以在文档旁边工作，你仍然可以随时查看当前草稿。" />
+
 ## 先了解三个词
 
 - **服务商**：提供 AI 服务的公司或平台。

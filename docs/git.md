@@ -22,10 +22,7 @@ Open the **Git** panel to see the current branch, changed files, and staged file
 2. Stage the files or individual changes you want to keep in the next checkpoint.
 3. Enter a short message and choose **Commit**.
 
-<div class="mark2-doc-shot-pair">
-  <figure><img src="/mark2-git-light.png" alt="Mark2 Git panel showing changes and recent commits in the light theme." /><figcaption>Review changes and commits in the light theme.</figcaption></figure>
-  <figure><img src="/mark2-git-dark.png" alt="Mark2 Git panel showing changes and recent commits in the dark theme." /><figcaption>The Git panel in the dark theme.</figcaption></figure>
-</div>
+<Mark2DocImage dark-src="/mark2-git-dark.png" light-src="/mark2-git-light.png" alt="Mark2 Git panel showing changes and recent commits." caption="Review repository changes and recent commits without leaving the editor." />
 
 Mark2 can use AI to suggest a commit message. You can review and edit it before committing.
 

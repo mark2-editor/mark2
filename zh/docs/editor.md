@@ -12,7 +12,7 @@ Mark2 有两种编辑方式，但它们使用的是同一份文档：
 
 你可以随时切换，不会因此产生两份文档。
 
-<figure class="mark2-doc-shot-single"><img src="/mark2-editor-basics-dark.png" alt="Mark2 编辑器深色模式下展示渲染后的 Markdown 文档。" /><figcaption>真实的 Mark2 文档编辑界面，格式化工具和导航都触手可及。</figcaption></figure>
+<Mark2DocImage dark-src="/mark2-editor-basics-dark.png" light-src="/mark2-editor-light.png" alt="Mark2 编辑器展示渲染后的 Markdown 文档。" caption="真实的 Mark2 文档编辑界面，格式化工具和导航都触手可及。" />
 
 ## 写作与格式化
 

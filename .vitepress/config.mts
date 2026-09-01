@@ -14,11 +14,11 @@ export default defineConfig({
     root: {
       label: 'English',
       lang: 'en-US',
-      title: 'Mark2 — Write in your own orbit',
-      description: 'Mark2 is a focused Markdown editor for ideas that deserve more than a text box.',
+      title: 'Mark2 — A Markdown editor for focused work',
+      description: 'Mark2 is a desktop Markdown editor with visual editing, AI assistance, Git versioning, local history, and PDF export.',
       head: [
-        ['meta', { property: 'og:title', content: 'Mark2 — Write in your own orbit' }],
-        ['meta', { property: 'og:description', content: 'A calm, capable Markdown editor for focused work, with built-in AI, Git versioning, and rich PDF export.' }]
+        ['meta', { property: 'og:title', content: 'Mark2 — A Markdown editor for focused work' }],
+        ['meta', { property: 'og:description', content: 'A desktop Markdown editor with visual editing, AI assistance, Git versioning, local history, and PDF export.' }]
       ],
       themeConfig: {
         nav: [
@@ -50,11 +50,11 @@ export default defineConfig({
     zh: {
       label: '简体中文',
       lang: 'zh-CN',
-      title: 'Mark2 — 按自己的节奏写作',
-      description: 'Mark2 是一款专注于写作的 Markdown 编辑器，内置 AI、Git 版本管理和高质量 PDF 导出。',
+      title: 'Mark2 — 专注写作的 Markdown 编辑器',
+      description: 'Mark2 是一款桌面 Markdown 编辑器，支持可视化编辑、AI 辅助、Git 版本管理、本地历史和 PDF 导出。',
       head: [
-        ['meta', { property: 'og:title', content: 'Mark2 — 按自己的节奏写作' }],
-        ['meta', { property: 'og:description', content: '一款安静而强大的 Markdown 编辑器，帮助你专注于真正重要的内容。' }]
+        ['meta', { property: 'og:title', content: 'Mark2 — 专注写作的 Markdown 编辑器' }],
+        ['meta', { property: 'og:description', content: '一款支持可视化编辑、AI 辅助、Git 版本管理、本地历史和 PDF 导出的桌面 Markdown 编辑器。' }]
       ],
       markdown: {
         container: {

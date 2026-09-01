@@ -297,6 +297,29 @@ body:has(.mark2-home) .VPContent {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+html[lang="zh-CN"] .mark2-home {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+}
+
+html[lang="zh-CN"] .mark2-home .mark2-hero h1,
+html[lang="zh-CN"] .mark2-home .mark2-section h2,
+html[lang="zh-CN"] .mark2-home .mark2-final-section h2 {
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+html[lang="zh-CN"] .mark2-home .mark2-hero h1 {
+  font-size: clamp(44px, 5vw, 70px);
+}
+
+html[lang="zh-CN"] .mark2-home .mark2-hero h1 em,
+html[lang="zh-CN"] .mark2-home .mark2-section h2 em,
+html[lang="zh-CN"] .mark2-home .mark2-final-section h2 em {
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: inherit;
+}
+
 .mark2-home::selection {
   background: rgba(125, 155, 211, 0.32);
   color: var(--mark2-paper);
@@ -310,6 +333,18 @@ body:has(.mark2-home) .VPContent {
 .mark2-home a:focus-visible {
   outline: 2px solid var(--mark2-blue-bright);
   outline-offset: 4px;
+}
+
+.mark2-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .mark2-hero {
@@ -490,13 +525,6 @@ body:has(.mark2-home) .VPContent {
   border-radius: 50%;
   background: var(--mark2-mint);
   box-shadow: 0 0 0 4px rgba(139, 191, 192, 0.1), 0 0 15px rgba(139, 191, 192, 0.55);
-}
-
-.mark2-divider {
-  width: 1px;
-  height: 12px;
-  margin: 0 3px;
-  background: var(--mark2-line);
 }
 
 .mark2-hero-preview {
@@ -924,22 +952,6 @@ body:has(.mark2-home) .VPContent {
   box-shadow: 0 0 0 7px rgba(139, 191, 192, 0.08), 0 0 22px rgba(139, 191, 192, 0.5);
 }
 
-.mark2-preview-caption {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 23px;
-  color: var(--mark2-faint);
-  font-size: 10px;
-  letter-spacing: 0.02em;
-}
-
-.mark2-caption-line {
-  width: 31px;
-  height: 1px;
-  background: var(--mark2-mint);
-}
-
 .mark2-signal-strip {
   display: grid;
   grid-template-columns: 180px 1fr 40px;
@@ -1054,26 +1066,11 @@ body:has(.mark2-home) .VPContent {
   padding-top: 96px;
 }
 
-.mark2-section-heading-row {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 48px;
-}
-
-.mark2-heading-aside {
-  max-width: 250px;
-  margin: 0 0 3px;
-  color: var(--mark2-faint);
-  font-size: 13px;
-  line-height: 1.7;
-}
-
 .mark2-feature-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
-  margin-top: 78px;
+  margin-top: 0;
 }
 
 .mark2-feature-card {
@@ -1519,9 +1516,10 @@ body:has(.mark2-home) .VPContent {
 .mark2-philosophy-card {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.6fr);
-  align-items: end;
-  min-height: 260px;
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1fr);
+  align-items: center;
+  gap: clamp(42px, 7vw, 96px);
+  min-height: 340px;
   overflow: hidden;
   padding: 40px clamp(28px, 6vw, 72px);
   border: 1px solid var(--mark2-line);
@@ -1537,12 +1535,50 @@ body:has(.mark2-home) .VPContent {
 .mark2-philosophy-compact-copy {
   position: relative;
   z-index: 1;
-  max-width: 270px;
-  justify-self: end;
-  margin: 0 0 4px;
+  max-width: 420px;
+  margin: 27px 0 0;
   color: var(--mark2-muted);
   font-size: 13px;
   line-height: 1.75;
+}
+
+.mark2-workflow-list {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 540px;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--mark2-line);
+  list-style: none;
+}
+
+.mark2-workflow-item {
+  display: grid;
+  grid-template-columns: 42px minmax(90px, 0.42fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--mark2-line-soft);
+}
+
+.mark2-workflow-index {
+  color: var(--mark2-blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.mark2-workflow-item strong {
+  color: var(--mark2-paper);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.mark2-workflow-item > span:last-child {
+  color: var(--mark2-muted);
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .mark2-philosophy-signature {
@@ -1622,15 +1658,6 @@ body:has(.mark2-home) .VPContent {
   text-align: center;
 }
 
-.mark2-final-kicker {
-  margin: 0 0 24px;
-  color: var(--mark2-mint);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.17em;
-  text-transform: uppercase;
-}
-
 .mark2-final-section h2 {
   font-size: clamp(47px, 6vw, 82px);
 }
@@ -1638,12 +1665,6 @@ body:has(.mark2-home) .VPContent {
 .mark2-final-actions {
   justify-content: center;
   margin-top: 37px;
-}
-
-.mark2-final-note {
-  margin: 24px 0 0;
-  color: var(--mark2-faint);
-  font-size: 11px;
 }
 
 .mark2-home-footer {
@@ -1742,6 +1763,19 @@ body:has(.mark2-home) .VPContent {
     margin: 27px 0 0;
   }
 
+  .mark2-philosophy-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .mark2-philosophy-compact-copy {
+    max-width: 520px;
+  }
+
+  .mark2-workflow-list {
+    max-width: none;
+  }
+
   .mark2-product-points {
     margin-top: 64px;
   }
@@ -1793,6 +1827,10 @@ body:has(.mark2-home) .VPContent {
   .mark2-hero h1,
   .mark2-section h2,
   .mark2-final-section h2 {
+    font-size: clamp(42px, 13vw, 64px);
+  }
+
+  html[lang="zh-CN"] .mark2-home .mark2-hero h1 {
     font-size: clamp(42px, 13vw, 64px);
   }
 
@@ -1859,10 +1897,6 @@ body:has(.mark2-home) .VPContent {
     font-size: 9px;
   }
 
-  .mark2-preview-caption {
-    font-size: 9px;
-  }
-
   .mark2-signal-strip {
     padding-right: 20px;
     padding-left: 20px;
@@ -1891,17 +1925,8 @@ body:has(.mark2-home) .VPContent {
     padding-top: 17px;
   }
 
-  .mark2-section-heading-row {
-    display: block;
-  }
-
-  .mark2-heading-aside {
-    margin-top: 26px;
-  }
-
   .mark2-feature-grid {
     display: block;
-    margin-top: 52px;
   }
 
   .mark2-feature-card {
@@ -1945,13 +1970,18 @@ body:has(.mark2-home) .VPContent {
 
   .mark2-philosophy-card {
     display: block;
-    min-height: 340px;
+    min-height: 0;
     padding: 31px 24px;
   }
 
   .mark2-philosophy-compact-copy {
-    max-width: 230px;
-    margin: 48px 0 0 auto;
+    max-width: 430px;
+    margin: 26px 0 0;
+  }
+
+  .mark2-workflow-list {
+    max-width: none;
+    margin-top: 34px;
   }
 
   .mark2-philosophy-orbit {
@@ -1982,6 +2012,17 @@ body:has(.mark2-home) .VPContent {
   .mark2-footer-meta {
     flex-direction: column;
     gap: 7px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mark2-workflow-item {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 5px 14px;
+  }
+
+  .mark2-workflow-item > span:last-child {
+    grid-column: 2;
   }
 }
 

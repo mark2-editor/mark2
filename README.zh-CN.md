@@ -8,15 +8,6 @@
 
 Mark2 是一款适用于 macOS 的桌面 Markdown 编辑器，将写作、审阅、版本管理和导出整合在同一个工作区中。
 
-## 应用功能
-
-- **可视化编辑与源码模式**：直接在渲染后的页面上写作，需要精确控制时编辑底层 Markdown 文本。
-- **文件与文件夹工作区**：打开文档或工作区，使用大纲、搜索、自动保存和本地历史整理写作内容。
-- **写作中的 AI 辅助**：使用 Agent 进行对话、改写、总结、翻译和工作区文件操作；行内补全可以建议下一句话。
-- **通过 Git 审阅变更**：查看 diff、暂存文件、创建提交、切换分支，并在编辑器中完成常用 Git 操作。
-- **工作区自定义**：选择编辑器和代码主题，并调整字体和背景纹理。
-- **预览与导出文档**：预览 HTML、PDF、图片和视频文件；导出 Markdown、HTML、PDF 或 PNG，也可以复制富文本。
-
 ![Mark2 编辑器展示渲染后的 Markdown 文档](./public/mark2-editor-dark.png)
 
 ## 主要功能
@@ -25,13 +16,13 @@ Mark2 是一款适用于 macOS 的桌面 Markdown 编辑器，将写作、审阅
   <tr>
     <td width="50%" valign="top">
       <h3>可视化编辑与源码模式</h3>
-      <p>直接在渲染后的页面上写作，需要精确控制时切换到 Markdown 源码模式。</p>
+      <p>在渲染后的页面上写作，需要精确修改时切换到源码模式，并使用大纲和搜索浏览工作区文档。</p>
       <img src="./public/mark2-editor-basics-dark.png" alt="Mark2 可视化编辑器展示渲染后的 Markdown 文档" width="100%" />
       <p><a href="./zh/docs/editor.md">阅读编辑器指南 →</a></p>
     </td>
     <td width="50%" valign="top">
       <h3>AI 辅助</h3>
-      <p>使用 Agent 改写、总结、翻译和回答文档问题，同时保持草稿在眼前。</p>
+      <p>在不离开当前文档的情况下，使用 Agent 改写、总结、翻译和回答文档问题。</p>
       <img src="./public/mark2-agent-dark.png" alt="Mark2 Agent 在编辑器旁审阅 Markdown 草稿" width="100%" />
       <p><a href="./zh/docs/ai.md">阅读 AI 指南 →</a></p>
     </td>
@@ -39,13 +30,13 @@ Mark2 是一款适用于 macOS 的桌面 Markdown 编辑器，将写作、审阅
   <tr>
     <td width="50%" valign="top">
       <h3>本地历史</h3>
-      <p>对比已保存的快照，并在不立即替换磁盘文件的情况下恢复旧草稿。</p>
+      <p>对比已保存的快照，并恢复较早版本，不会立即替换磁盘文件。</p>
       <img src="./public/mark2-history-draft-dark.png" alt="Mark2 对比已保存版本和当前草稿" width="100%" />
       <p><a href="./zh/docs/history.md">阅读历史记录指南 →</a></p>
     </td>
     <td width="50%" valign="top">
       <h3>Git 工作流</h3>
-      <p>在一个可视化面板中查看 diff、暂存修改、创建提交，并使用分支和远程仓库。</p>
+      <p>在一个可视化面板中查看 diff、暂存修改、创建提交，并管理分支和远程仓库。</p>
       <img src="./public/mark2-git-dark.png" alt="Mark2 Git 面板展示变更和最近提交" width="100%" />
       <p><a href="./zh/docs/git.md">阅读 Git 指南 →</a></p>
     </td>
@@ -53,13 +44,13 @@ Mark2 是一款适用于 macOS 的桌面 Markdown 编辑器，将写作、审阅
   <tr>
     <td width="50%" valign="top">
       <h3>文档导出</h3>
-      <p>导出 PDF、PNG、HTML 或 Markdown。PDF 会保留标题、表格、代码、数学公式和 Mermaid 图表。</p>
+      <p>支持预览 HTML、PDF、图片和视频文件，并导出为 PDF、PNG、HTML 或 Markdown。PDF 会保留标题、表格、代码、数学公式和 Mermaid 图表。</p>
       <img src="./public/mark2-export-pdf.png" alt="从 Mark2 导出的 PDF 在 Preview 中打开" width="100%" />
       <p><a href="./zh/docs/export.md">阅读导出指南 →</a></p>
     </td>
     <td width="50%" valign="top">
       <h3>外观设置</h3>
-      <p>选择编辑器主题、代码主题、字体、界面缩放和背景纹理，让长时间写作更舒适。</p>
+      <p>选择编辑器主题、代码主题、字体、界面缩放和背景纹理，按自己的习惯调整编辑器外观。</p>
       <img src="./public/mark2-settings-appearance.png" alt="Mark2 外观设置展示主题和字体选项" width="100%" />
       <p><a href="./zh/docs/appearance.md">阅读外观指南 →</a></p>
     </td>

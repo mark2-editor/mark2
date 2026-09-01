@@ -70,82 +70,13 @@
   --vp-c-danger-soft: var(--vp-c-red-soft);
 }
 
-/**
- * Component: Button
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-button-brand-border: transparent;
-  --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand-3);
-  --vp-button-brand-hover-border: transparent;
-  --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
-  --vp-button-brand-active-border: transparent;
-  --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: var(--vp-c-brand-1);
-}
-
-/**
- * Component: Home
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
-  );
-
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #bd34fe 50%,
-    #47caff 50%
-  );
-  --vp-home-hero-image-filter: blur(44px);
-}
-
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
-}
-
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
-  }
-}
-
-/**
- * Component: Custom Block
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-custom-block-tip-border: transparent;
-  --vp-custom-block-tip-text: var(--vp-c-text-1);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
-  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
-}
-
-/**
- * Component: Algolia
- * -------------------------------------------------------------------------- */
-
-.DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand-1) !important;
-}
-
 /* -------------------------------------------------------------------------- */
 /* Mark2 product homepage                                                     */
 /* -------------------------------------------------------------------------- */
 
 :root {
   --mark2-ink: #0f1112;
-  --mark2-ink-soft: #15181a;
   --mark2-surface: #1b1e20;
-  --mark2-surface-raised: #222629;
   --mark2-paper: #f1eee8;
   --mark2-paper-soft: #d7d8d3;
   --mark2-muted: #99a2a2;
@@ -156,7 +87,6 @@
   --mark2-line: rgba(236, 241, 238, 0.12);
   --mark2-line-soft: rgba(236, 241, 238, 0.07);
   --mark2-line-strong: rgba(236, 241, 238, 0.15);
-  --mark2-line-extra-strong: rgba(236, 241, 238, 0.22);
   --mark2-surface-inset: rgba(10, 12, 13, 0.18);
   --mark2-nav-background: linear-gradient(180deg, rgba(27, 31, 33, 0.82) 0%, rgba(15, 17, 18, 0.64) 100%);
   --mark2-nav-border: rgba(236, 241, 238, 0.13);
@@ -180,9 +110,7 @@
 
 html:not(.dark) {
   --mark2-ink: #f5f7f8;
-  --mark2-ink-soft: #edf1f3;
   --mark2-surface: #ffffff;
-  --mark2-surface-raised: #f1f4f6;
   --mark2-paper: #172333;
   --mark2-paper-soft: #3e4d60;
   --mark2-muted: #647284;
@@ -193,7 +121,6 @@ html:not(.dark) {
   --mark2-line: rgba(35, 48, 63, 0.13);
   --mark2-line-soft: rgba(35, 48, 63, 0.07);
   --mark2-line-strong: rgba(35, 48, 63, 0.16);
-  --mark2-line-extra-strong: rgba(35, 48, 63, 0.24);
   --mark2-surface-inset: rgba(57, 74, 91, 0.07);
   --mark2-nav-background: linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(245, 248, 249, 0.68) 100%);
   --mark2-nav-border: rgba(35, 48, 63, 0.13);
@@ -2032,6 +1959,10 @@ body:not(:has(.mark2-home)) .VPNavBarTitle.has-sidebar .title {
   border-bottom-color: transparent;
 }
 
+body:not(:has(.mark2-home)) .VPNavBar.has-sidebar:not(.home) .divider .divider-line {
+  background-color: var(--vp-c-divider);
+}
+
 body:not(:has(.mark2-home)) .VPNavBarTitle .logo {
   width: 28px;
   height: 28px;
@@ -2040,8 +1971,12 @@ body:not(:has(.mark2-home)) .VPNavBarTitle .logo {
 }
 
 body:not(:has(.mark2-home)) .VPSidebar {
-  background: var(--vp-c-bg-soft);
+  background: var(--vp-c-bg);
   border-right: 1px solid var(--vp-c-divider);
+}
+
+body:not(:has(.mark2-home)) .VPSidebar .curtain {
+  background-color: var(--vp-c-bg);
 }
 
 body:not(:has(.mark2-home)) .VPSidebarItem.level-0 > .item {

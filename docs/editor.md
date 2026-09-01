@@ -12,6 +12,8 @@ Mark2 has two ways to work with the same document:
 
 You can switch between them without creating a second copy of the document.
 
+<figure class="mark2-doc-shot-single"><img src="/mark2-editor-basics-dark.png" alt="Mark2 editor showing a rendered Markdown document in dark mode." /><figcaption>A real Mark2 document in the visual editor, with formatting and navigation close at hand.</figcaption></figure>
+
 ## Write and format
 
 Use the toolbar or the **Edit** menu for headings, bold, italic, lists, quotes, code, links, images, and tables. You do not need to learn Markdown symbols to use these tools.

@@ -12,6 +12,8 @@ Mark2 有两种编辑方式，但它们使用的是同一份文档：
 
 你可以随时切换，不会因此产生两份文档。
 
+<figure class="mark2-doc-shot-single"><img src="/mark2-editor-basics-dark.png" alt="Mark2 编辑器深色模式下展示渲染后的 Markdown 文档。" /><figcaption>真实的 Mark2 文档编辑界面，格式化工具和导航都触手可及。</figcaption></figure>
+
 ## 写作与格式化
 
 使用工具栏或“编辑”菜单，可以设置标题、粗体、斜体、列表、引用、代码、链接、图片和表格。你不需要记住 Markdown 符号。

@@ -4,7 +4,7 @@
 
 This repository contains the official Mark2 Editor website and user help documentation.
 Mark2 is a WYSIWYG Markdown editor with an AI writing assistant, privacy-first multi-model
-support, Git-based versioning, and PDF export for macOS and Windows.
+support, Git-based versioning, and PDF export. It is currently available for macOS only.
 
 The root `README.md` is the product introduction for Mark2 Editor. Keep it focused on what
 Mark2 is, who it is for, its key capabilities, and links to the website or documentation.

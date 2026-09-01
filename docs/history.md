@@ -24,6 +24,11 @@ Mark2 records a version when you save. A manual save always records one; the int
 
 Open the document's **History** view in the editor sidebar. Each entry shows a small content preview and its time. Select an entry to compare it with the previous version, the current document, or another entry.
 
+<div class="mark2-doc-shot-pair">
+  <figure><img src="/mark2-history-draft-light.png" alt="Mark2 comparing the last saved version with a draft in the light theme." /><figcaption>Compare the last saved version with your draft in the light theme.</figcaption></figure>
+  <figure><img src="/mark2-history-draft-dark.png" alt="Mark2 comparing the last saved version with a draft in the dark theme." /><figcaption>The same draft comparison in the dark theme.</figcaption></figure>
+</div>
+
 ## Restore a version
 
 Choose **Restore** in the comparison view. Mark2 puts the older content into a draft first, so the file on disk is not replaced immediately. Review it, then save it when you are happy with the result.

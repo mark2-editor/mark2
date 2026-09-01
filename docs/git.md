@@ -1,21 +1,16 @@
----
-title: Git workflow
-description: Use Mark2's Git panel to review, commit, branch, and sync documents.
----
-
 # Git workflow
 
 Git is a tool that keeps a record of changes to files. Think of it as a timeline for a folder: you can see what changed, save named checkpoints, and return to an earlier checkpoint when needed. Mark2 puts the common Git actions in a visual panel, so you do not need to use a terminal.
 
 ## A few words you will see
 
-| Term | Plain meaning |
-| --- | --- |
-| Repository | A folder whose changes Git keeps track of |
-| Commit | A named checkpoint of saved changes |
-| Branch | A separate line of work, useful for trying an idea safely |
-| Remote | Another copy of the repository, often on a server |
-| Stage | Choose which changes belong in the next checkpoint |
+| Term       | Plain meaning                                             |
+| :--------- | :-------------------------------------------------------- |
+| Repository | A folder whose changes Git keeps track of                 |
+| Commit     | A named checkpoint of saved changes                       |
+| Branch     | A separate line of work, useful for trying an idea safely |
+| Remote     | Another copy of the repository, often on a server         |
+| Stage      | Choose which changes belong in the next checkpoint        |
 
 ## Get started
 
@@ -27,6 +22,11 @@ Open the **Git** panel to see the current branch, changed files, and staged file
 2. Stage the files or individual changes you want to keep in the next checkpoint.
 3. Enter a short message and choose **Commit**.
 
+<div class="mark2-doc-shot-pair">
+  <figure><img src="/mark2-git-light.png" alt="Mark2 Git panel showing changes and recent commits in the light theme." /><figcaption>Review changes and commits in the light theme.</figcaption></figure>
+  <figure><img src="/mark2-git-dark.png" alt="Mark2 Git panel showing changes and recent commits in the dark theme." /><figcaption>The Git panel in the dark theme.</figcaption></figure>
+</div>
+
 Mark2 can use AI to suggest a commit message. You can review and edit it before committing.
 
 ## Work with branches and a remote copy
@@ -34,11 +34,3 @@ Mark2 can use AI to suggest a commit message. You can review and edit it before 
 Create a branch when you want to try changes without disturbing your main line of work. Later, you can switch branches or merge one branch into another.
 
 If the repository has a remote copy, use **Fetch**, **Pull**, **Push**, or **Sync** to keep the two copies up to date. When Mark2 asks how to combine different changes, **Merge** keeps both lines and adds a new checkpoint; **Rebase** places your changes after the latest remote changes and is more suitable for users who already know Git.
-
-## Temporarily set changes aside
-
-**Stash** puts unfinished changes aside so you can work on something else. Apply or pop the stash when you are ready to bring those changes back.
-
-If two changes affect the same lines, Git reports a conflict. Mark2 shows the conflicting files and lets you choose a side or edit the file yourself. Save and stage the resolved file, then continue the operation.
-
-Mark2 asks you to save unsaved documents before a Git action that may change files on disk.

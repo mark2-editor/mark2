@@ -6,6 +6,7 @@ export default defineConfig({
   description: 'A calm, capable Markdown editor for focused work.',
   cleanUrls: true,
   head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/mark2-icon.png' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { name: 'twitter:card', content: 'summary' }]
   ],
@@ -97,6 +98,7 @@ export default defineConfig({
     }
   },
   themeConfig: {
+    siteTitle: 'Mark2',
     logo: {
       src: '/mark2-icon.png',
       alt: 'Mark2'

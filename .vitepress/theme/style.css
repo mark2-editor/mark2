@@ -155,7 +155,63 @@
   --mark2-mint: #8bbfc0;
   --mark2-line: rgba(236, 241, 238, 0.12);
   --mark2-line-soft: rgba(236, 241, 238, 0.07);
+  --mark2-line-strong: rgba(236, 241, 238, 0.15);
+  --mark2-line-extra-strong: rgba(236, 241, 238, 0.22);
+  --mark2-surface-inset: rgba(10, 12, 13, 0.18);
+  --mark2-nav-background: linear-gradient(180deg, rgba(27, 31, 33, 0.82) 0%, rgba(15, 17, 18, 0.64) 100%);
+  --mark2-nav-border: rgba(236, 241, 238, 0.13);
+  --mark2-nav-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  --mark2-frame-background: #101315;
+  --mark2-frame-border: rgba(236, 241, 238, 0.15);
+  --mark2-frame-shadow: 0 34px 90px rgba(0, 0, 0, 0.38), 0 2px 0 rgba(255, 255, 255, 0.08) inset;
+  --mark2-frame-highlight: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 28%, transparent 72%, rgba(139, 191, 192, 0.08));
+  --mark2-feature-accent-background: linear-gradient(145deg, rgba(125, 155, 211, 0.3), rgba(81, 105, 153, 0.13) 60%), #263041;
+  --mark2-feature-dark-background: #171a1c;
+  --mark2-feature-export-background: #191d1f;
+  --mark2-philosophy-background: radial-gradient(circle at 76% 36%, rgba(139, 191, 192, 0.14), transparent 26%), linear-gradient(135deg, #1c2426, #15191b 64%);
+  --mark2-lightbox-background: rgba(7, 9, 10, 0.82);
+  --mark2-lightbox-close-background: rgba(20, 24, 25, 0.72);
+  --mark2-lightbox-close-border: rgba(236, 241, 238, 0.24);
+  --mark2-lightbox-close-border-hover: rgba(236, 241, 238, 0.52);
+  --mark2-primary-button-text: #111923;
+  --mark2-primary-button-hover-background: #c1d0ef;
   --mark2-radius: 18px;
+}
+
+html:not(.dark) {
+  --mark2-ink: #f5f7f8;
+  --mark2-ink-soft: #edf1f3;
+  --mark2-surface: #ffffff;
+  --mark2-surface-raised: #f1f4f6;
+  --mark2-paper: #172333;
+  --mark2-paper-soft: #3e4d60;
+  --mark2-muted: #647284;
+  --mark2-faint: #8793a0;
+  --mark2-blue: #5279c3;
+  --mark2-blue-bright: #4c6fb4;
+  --mark2-mint: #398b8b;
+  --mark2-line: rgba(35, 48, 63, 0.13);
+  --mark2-line-soft: rgba(35, 48, 63, 0.07);
+  --mark2-line-strong: rgba(35, 48, 63, 0.16);
+  --mark2-line-extra-strong: rgba(35, 48, 63, 0.24);
+  --mark2-surface-inset: rgba(57, 74, 91, 0.07);
+  --mark2-nav-background: linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(245, 248, 249, 0.68) 100%);
+  --mark2-nav-border: rgba(35, 48, 63, 0.13);
+  --mark2-nav-shadow: 0 12px 32px rgba(46, 65, 86, 0.12);
+  --mark2-frame-background: #f7f9fa;
+  --mark2-frame-border: rgba(35, 48, 63, 0.15);
+  --mark2-frame-shadow: 0 34px 90px rgba(46, 65, 86, 0.17), 0 2px 0 rgba(255, 255, 255, 0.92) inset;
+  --mark2-frame-highlight: linear-gradient(135deg, rgba(255, 255, 255, 0.76), transparent 28%, transparent 72%, rgba(57, 139, 139, 0.08));
+  --mark2-feature-accent-background: linear-gradient(145deg, rgba(125, 155, 211, 0.18), rgba(125, 155, 211, 0.07) 60%), #edf2fa;
+  --mark2-feature-dark-background: #f0f3f5;
+  --mark2-feature-export-background: #f2f5f6;
+  --mark2-philosophy-background: radial-gradient(circle at 76% 36%, rgba(57, 139, 139, 0.12), transparent 26%), linear-gradient(135deg, #eaf2f2, #f3f6f7 64%);
+  --mark2-lightbox-background: rgba(235, 241, 244, 0.86);
+  --mark2-lightbox-close-background: rgba(255, 255, 255, 0.82);
+  --mark2-lightbox-close-border: rgba(35, 48, 63, 0.2);
+  --mark2-lightbox-close-border-hover: rgba(35, 48, 63, 0.42);
+  --mark2-primary-button-text: #ffffff;
+  --mark2-primary-button-hover-background: #3f63a8;
 }
 
 body:has(.mark2-home) {
@@ -164,13 +220,15 @@ body:has(.mark2-home) {
 }
 
 body:has(.mark2-home) .VPNav {
-  background: rgba(15, 17, 18, 0.78);
-  border-bottom: 1px solid var(--mark2-line-soft);
-  backdrop-filter: blur(18px);
+  background: var(--mark2-nav-background);
+  border-bottom: 1px solid var(--mark2-nav-border);
+  box-shadow: var(--mark2-nav-shadow);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+  backdrop-filter: blur(22px) saturate(135%);
 }
 
 body:has(.mark2-home) .VPNavBar {
-  background: transparent;
+  background: transparent !important;
 }
 
 body:has(.mark2-home) .VPNavBarTitle .title {
@@ -398,12 +456,12 @@ body:has(.mark2-home) .VPContent {
 
 .mark2-button-primary {
   background: var(--mark2-blue-bright);
-  color: #111923 !important;
+  color: var(--mark2-primary-button-text) !important;
   box-shadow: 0 8px 24px rgba(125, 155, 211, 0.16);
 }
 
 .mark2-button-primary:hover {
-  background: #c1d0ef;
+  background: var(--mark2-primary-button-hover-background);
   box-shadow: 0 10px 30px rgba(125, 155, 211, 0.25);
 }
 
@@ -450,10 +508,10 @@ body:has(.mark2-home) .VPContent {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  border: 1px solid rgba(236, 241, 238, 0.15);
+  border: 1px solid var(--mark2-frame-border);
   border-radius: 18px;
-  background: #101315;
-  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.38), 0 2px 0 rgba(255, 255, 255, 0.08) inset;
+  background: var(--mark2-frame-background);
+  box-shadow: var(--mark2-frame-shadow);
   transform: perspective(1500px) rotateY(-5deg) rotateX(2deg) rotateZ(1.2deg);
   transform-origin: center;
 }
@@ -461,7 +519,7 @@ body:has(.mark2-home) .VPContent {
 .mark2-shot-frame::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 28%, transparent 72%, rgba(139, 191, 192, 0.08));
+  background: var(--mark2-frame-highlight);
   content: "";
   pointer-events: none;
 }
@@ -476,10 +534,10 @@ body:has(.mark2-home) .VPContent {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  border: 1px solid rgba(236, 241, 238, 0.15);
+  border: 1px solid var(--mark2-frame-border);
   border-radius: 18px;
   background: var(--mark2-surface);
-  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.38), 0 2px 0 rgba(255, 255, 255, 0.08) inset;
+  box-shadow: var(--mark2-frame-shadow);
   transform: perspective(1500px) rotateY(-5deg) rotateX(2deg) rotateZ(1.2deg);
   transform-origin: center;
 }
@@ -537,6 +595,10 @@ body:has(.mark2-home) .VPContent {
   overflow: hidden;
 }
 
+.mark2-home-footer .mark2-brand-image {
+  background: transparent;
+}
+
 .mark2-brand-image img {
   display: block;
   width: 100%;
@@ -585,7 +647,7 @@ body:has(.mark2-home) .VPContent {
   flex-direction: column;
   padding: 22px 12px 14px;
   border-right: 1px solid var(--mark2-line-soft);
-  background: rgba(10, 12, 13, 0.18);
+  background: var(--mark2-surface-inset);
   color: var(--mark2-muted);
   font-size: 10px;
 }
@@ -1038,20 +1100,57 @@ body:has(.mark2-home) .VPContent {
 
 .mark2-feature-card-accent {
   grid-column: span 5;
-  background: linear-gradient(145deg, rgba(125, 155, 211, 0.3), rgba(81, 105, 153, 0.13) 60%), #263041;
+  background: var(--mark2-feature-accent-background);
 }
 
 .mark2-feature-card-dark {
   grid-column: span 5;
-  background: #171a1c;
+  background: var(--mark2-feature-dark-background);
 }
 
 .mark2-feature-card-export {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.95fr);
+  grid-template-rows: auto 1fr;
   grid-column: span 7;
-  flex-direction: row;
-  align-items: end;
-  gap: 36px;
-  background: #191d1f;
+  align-items: center;
+  column-gap: 36px;
+  row-gap: 22px;
+  background: var(--mark2-feature-export-background);
+}
+
+.mark2-feature-card-export .mark2-feature-card-top {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.mark2-feature-card-export .mark2-export-copy {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.mark2-feature-card-export .mark2-export-copy h3 {
+  margin-top: 0;
+}
+
+.mark2-feature-card-focus {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.mark2-feature-card-focus .mark2-feature-card-top {
+  width: 100%;
+}
+
+.mark2-feature-card-focus h3 {
+  margin-top: 42px;
+}
+
+.mark2-feature-card-focus .mark2-feature-shot-editor {
+  width: 100%;
+  margin-top: 22px;
 }
 
 .mark2-feature-card-top {
@@ -1067,7 +1166,7 @@ body:has(.mark2-home) .VPContent {
   justify-content: center;
   width: 27px;
   height: 27px;
-  border: 1px solid rgba(172, 192, 234, 0.35);
+  border: 1px solid var(--mark2-line-strong);
   border-radius: 50%;
   color: var(--mark2-blue-bright);
   font-size: 15px;
@@ -1088,9 +1187,9 @@ body:has(.mark2-home) .VPContent {
   overflow: hidden;
   width: 100%;
   margin-top: auto;
-  border: 1px solid rgba(236, 241, 238, 0.14);
-  border-radius: 9px;
-  background: #101315;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   aspect-ratio: 1.5;
 }
 
@@ -1098,7 +1197,161 @@ body:has(.mark2-home) .VPContent {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  border-radius: 9px;
+  object-fit: contain;
+}
+
+.mark2-feature-shot {
+  display: block;
+  padding: 0;
+  color: inherit;
+  text-align: left;
+  cursor: zoom-in;
+}
+
+.mark2-feature-shot:focus-visible {
+  outline: 2px solid var(--mark2-blue-bright);
+  outline-offset: 5px;
+}
+
+.mark2-lightbox-open {
+  overflow: hidden;
+}
+
+.mark2-lightbox {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 42px;
+  background: var(--mark2-lightbox-background);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.mark2-lightbox-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  cursor: zoom-out;
+}
+
+.mark2-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--mark2-lightbox-close-border);
+  border-radius: 50%;
+  background: var(--mark2-lightbox-close-background);
+  color: var(--mark2-paper);
+  cursor: pointer;
+}
+
+.mark2-lightbox-close:hover {
+  border-color: var(--mark2-lightbox-close-border-hover);
+}
+
+.mark2-lightbox-close:focus-visible {
+  outline: 2px solid var(--mark2-blue-bright);
+  outline-offset: 4px;
+}
+
+.mark2-lightbox-enter-active,
+.mark2-lightbox-leave-active {
+  transition: opacity 180ms ease;
+}
+
+.mark2-lightbox-enter-active .mark2-lightbox-image,
+.mark2-lightbox-leave-active .mark2-lightbox-image {
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mark2-lightbox-enter-from,
+.mark2-lightbox-leave-to {
+  opacity: 0;
+}
+
+.mark2-lightbox-enter-from .mark2-lightbox-image,
+.mark2-lightbox-leave-to .mark2-lightbox-image {
+  transform: scale(0.92);
+}
+
+.mark2-feature-shot-git img {
+  object-position: right center;
+}
+
+.mark2-feature-shot-git {
+  aspect-ratio: 1375 / 923;
+}
+
+.mark2-feature-shot-editor {
+  margin-top: 0;
+  aspect-ratio: 1157 / 786;
+}
+
+.mark2-feature-shot-editor img {
+  object-position: center;
+}
+
+.mark2-feature-shot-export {
+  flex: 0 0 auto;
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: end;
+  width: min(100%, 320px);
+  margin-top: 0;
+  aspect-ratio: 1127 / 1148;
+  transform: rotate(0.7deg);
+}
+
+.mark2-feature-shot-export img {
+  object-position: center;
+}
+
+.mark2-doc-shot-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0 30px;
+}
+
+.mark2-doc-shot-pair figure,
+.mark2-doc-shot-single {
+  margin: 0;
+}
+
+.mark2-doc-shot-pair img,
+.mark2-doc-shot-single img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 9px;
+}
+
+.mark2-doc-shot-single {
+  max-width: 820px;
+  margin: 24px 0 30px;
+}
+
+.mark2-doc-shot-pair figcaption,
+.mark2-doc-shot-single figcaption {
+  margin-top: 8px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .mark2-mini-canvas {
@@ -1273,7 +1526,7 @@ body:has(.mark2-home) .VPContent {
   padding: 40px clamp(28px, 6vw, 72px);
   border: 1px solid var(--mark2-line);
   border-radius: 24px;
-  background: radial-gradient(circle at 76% 36%, rgba(139, 191, 192, 0.14), transparent 26%), linear-gradient(135deg, #1c2426, #15191b 64%);
+  background: var(--mark2-philosophy-background);
 }
 
 .mark2-philosophy-copy {
@@ -1506,6 +1759,24 @@ body:has(.mark2-home) .VPContent {
 
   .mark2-feature-card-export {
     grid-column: span 2;
+    display: flex;
+    min-height: 470px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .mark2-feature-card-export .mark2-feature-card-top {
+    flex: 0 0 auto;
+  }
+
+  .mark2-feature-card-export .mark2-export-copy {
+    flex: 0 0 auto;
+  }
+
+  .mark2-feature-shot-export {
+    align-self: center;
+    width: min(100%, 320px);
   }
 }
 
@@ -1640,10 +1911,27 @@ body:has(.mark2-home) .VPContent {
   }
 
   .mark2-feature-card-export {
+    display: flex;
     min-height: 390px;
     flex-direction: column;
     align-items: stretch;
     gap: 20px;
+  }
+
+  .mark2-feature-card-focus {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .mark2-feature-card-focus h3 {
+    margin-top: 48px;
+  }
+
+  .mark2-feature-card-focus .mark2-feature-shot-editor {
+    margin-top: 18px;
   }
 
   .mark2-export-sheet {

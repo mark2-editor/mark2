@@ -24,6 +24,11 @@ Mark2 会在保存文档时记录版本。手动保存一定会记录一个版�
 
 在编辑器侧边栏打开当前文档的“历史”视图。每个条目会显示一小段内容预览和保存时间。选择条目，可以将它与前一个版本、当前文档或另一个历史版本进行对比。
 
+<div class="mark2-doc-shot-pair">
+  <figure><img src="/mark2-history-draft-light.png" alt="Mark2 浅色主题下对比上次保存的版本和当前草稿。" /><figcaption>浅色主题下，对比上次保存的版本和当前草稿。</figcaption></figure>
+  <figure><img src="/mark2-history-draft-dark.png" alt="Mark2 深色主题下对比上次保存的版本和当前草稿。" /><figcaption>深色主题下的同一个草稿对比界面。</figcaption></figure>
+</div>
+
 ## 恢复版本
 
 在对比界面选择“恢复”。Mark2 会先把旧内容放入草稿，不会立刻替换磁盘上的文件。检查满意后，再保存即可。

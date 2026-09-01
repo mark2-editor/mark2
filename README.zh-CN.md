@@ -2,6 +2,8 @@
 
 > 本仓库不包含 Mark2 编辑器源代码，仅用于维护官网、用户文档和 Issue。
 
+官网与帮助文档：[https://mark2-editor.github.io/mark2/zh/](https://mark2-editor.github.io/mark2/zh/)
+
 [English](README.md)
 
 Mark2 是一款适用于 macOS 的桌面 Markdown 编辑器，将写作、审阅、版本管理和导出整合在同一个工作区中。

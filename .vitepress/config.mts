@@ -1,6 +1,41 @@
 import { defineConfig } from 'vitepress'
 
 const base = process.env.VITEPRESS_BASE ?? '/'
+const normalizedBase = base.endsWith('/') ? base : `${base}/`
+const localeRedirectScript = `
+(() => {
+  const preferenceKey = 'mark2-locale'
+  const base = ${JSON.stringify(normalizedBase)}
+  const rootPaths = new Set([base, base.slice(0, -1)])
+  const currentPath = window.location.pathname
+
+  try {
+    if (rootPaths.has(currentPath) && !window.localStorage.getItem(preferenceKey)) {
+      const language = (window.navigator.languages?.[0] ?? window.navigator.language ?? '').toLowerCase()
+      if (language === 'zh' || language.startsWith('zh-')) {
+        window.location.replace(base + 'zh/')
+      }
+    }
+
+    document.addEventListener('click', (event) => {
+      const target = event.target
+      const link = target instanceof Element ? target.closest('a[href]') : null
+      if (!link) return
+
+      const url = new URL(link.href, window.location.href)
+      if (url.origin !== window.location.origin) return
+
+      if (url.pathname === base || url.pathname === base.slice(0, -1)) {
+        window.localStorage.setItem(preferenceKey, 'en')
+      } else if (url.pathname === base + 'zh' || url.pathname.startsWith(base + 'zh/')) {
+        window.localStorage.setItem(preferenceKey, 'zh')
+      }
+    }, true)
+  } catch {
+    // Ignore browsers that block localStorage; language routing still works by URL.
+  }
+})()
+`
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,7 +46,8 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: `${base}mark2-icon.png` }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }]
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['script', {}, localeRedirectScript]
   ],
   locales: {
     root: {

@@ -1,0 +1,8 @@
+# Crawlers only read robots.txt from the host root. On github.io project pages
+# this file is served under /mark2/ and is therefore advisory only; submit the
+# sitemap directly in Google Search Console until the site moves to a domain
+# whose root this repository controls.
+User-agent: *
+Allow: /
+
+Sitemap: https://mark2-editor.github.io/mark2/sitemap.xml

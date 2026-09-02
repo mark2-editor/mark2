@@ -1,6 +1,7 @@
 ---
 title: Mark2 — 专注写作的 Markdown 编辑器
 description: Mark2 是一款桌面 Markdown 编辑器，支持可视化编辑、AI 辅助、Git 版本管理、本地历史和 PDF 导出。
+titleTemplate: false
 layout: page
 sidebar: false
 outline: false

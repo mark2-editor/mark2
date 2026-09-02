@@ -1,6 +1,7 @@
 ---
 title: Mark2 — A Markdown editor for focused work
 description: Mark2 is a desktop Markdown editor with visual editing, AI assistance, Git versioning, local history, and PDF export.
+titleTemplate: false
 layout: page
 sidebar: false
 outline: false

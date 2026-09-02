@@ -150,12 +150,12 @@ body:has(.mark2-home) .VPNav {
   background: var(--mark2-nav-background);
   border-bottom: 1px solid var(--mark2-nav-border);
   box-shadow: var(--mark2-nav-shadow);
-  -webkit-backdrop-filter: blur(22px) saturate(135%);
-  backdrop-filter: blur(22px) saturate(135%);
 }
 
 body:has(.mark2-home) .VPNavBar {
-  background: transparent !important;
+  background: var(--mark2-nav-background) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+  backdrop-filter: blur(22px) saturate(135%);
 }
 
 body:has(.mark2-home) .VPNavBarTitle .title {
@@ -1942,12 +1942,12 @@ body:not(:has(.mark2-home)) .VPNav {
   background: color-mix(in srgb, var(--vp-c-bg) 88%, transparent);
   border-bottom: 1px solid var(--vp-c-divider);
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.06);
-  -webkit-backdrop-filter: blur(18px) saturate(125%);
-  backdrop-filter: blur(18px) saturate(125%);
 }
 
 body:not(:has(.mark2-home)) .VPNavBar {
-  background: transparent;
+  background: color-mix(in srgb, var(--vp-c-bg) 88%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  backdrop-filter: blur(18px) saturate(125%);
 }
 
 body:not(:has(.mark2-home)) .VPNavBarTitle .title {

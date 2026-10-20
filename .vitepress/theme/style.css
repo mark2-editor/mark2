@@ -124,7 +124,9 @@ body:has(.mark2-home) .VPFooter {
 }
 
 .mark2-hero h1 em,
-.mark2-ai-grid h2 em {
+.mark2-ai-grid h2 em,
+.mark2-section h2 em,
+.mark2-final h2 em {
   color: var(--mark2-accent);
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 400;

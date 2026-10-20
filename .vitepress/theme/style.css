@@ -1,44 +1,48 @@
 :root {
-  --vp-c-brand-1: #216454;
-  --vp-c-brand-2: #287b66;
-  --vp-c-brand-3: #216454;
-  --vp-c-brand-soft: rgba(40, 123, 102, 0.1);
-  --vp-c-bg: #fcfcf9;
-  --vp-c-bg-soft: #f3f4ee;
-  --vp-c-bg-alt: #f7f8f3;
-  --vp-c-text-1: #202d29;
-  --vp-c-text-2: #56635d;
-  --vp-c-divider: #e2e7de;
+  --vp-c-brand-1: #9c4a2d;
+  --vp-c-brand-2: #b35f3d;
+  --vp-c-brand-3: #833d24;
+  --vp-c-brand-soft: rgba(156, 74, 45, 0.1);
+  --vp-c-bg: #faf6ee;
+  --vp-c-bg-soft: #f3ebdf;
+  --vp-c-bg-alt: #f7f0e5;
+  --vp-c-bg-elv: #fffbf3;
+  --vp-c-text-1: #2c2620;
+  --vp-c-text-2: #6b5f52;
+  --vp-c-divider: #e6dbc9;
+  --vp-code-block-bg: #f4ecdf;
   --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  --mark2-bg: #f8f9f3;
-  --mark2-card: #ffffff;
-  --mark2-ink: #22362d;
-  --mark2-muted: #627067;
-  --mark2-accent: #216454;
-  --mark2-tint: #e9f0e5;
-  --mark2-line: #dce4d8;
-  --mark2-shadow: 0 24px 65px rgba(37, 62, 43, 0.09);
+  --mark2-bg: #f8f2e8;
+  --mark2-card: #fffdf8;
+  --mark2-ink: #2c2620;
+  --mark2-muted: #6b5f52;
+  --mark2-accent: #9c4a2d;
+  --mark2-tint: #f2e4d2;
+  --mark2-line: #e3d6c3;
+  --mark2-shadow: 0 24px 60px rgba(74, 48, 27, 0.1);
 }
 
 .dark {
-  --vp-c-brand-1: #9dd3b5;
-  --vp-c-brand-2: #b0dfc4;
-  --vp-c-brand-3: #347f65;
-  --vp-c-brand-soft: rgba(157, 211, 181, 0.1);
-  --vp-c-bg: #17221d;
-  --vp-c-bg-soft: #202e26;
-  --vp-c-bg-alt: #1b2821;
-  --vp-c-text-1: #ecf0e7;
-  --vp-c-text-2: #b3c0b4;
-  --vp-c-divider: #354339;
-  --mark2-bg: #17221d;
-  --mark2-card: #1e2c24;
-  --mark2-ink: #ecf0e7;
-  --mark2-muted: #b3c0b4;
-  --mark2-accent: #9dd3b5;
-  --mark2-tint: #26392e;
-  --mark2-line: #354a3c;
-  --mark2-shadow: 0 24px 65px rgba(0, 0, 0, 0.22);
+  --vp-c-brand-1: #e2a57a;
+  --vp-c-brand-2: #ecb88f;
+  --vp-c-brand-3: #c07c4e;
+  --vp-c-brand-soft: rgba(226, 165, 122, 0.12);
+  --vp-c-bg: #1e1914;
+  --vp-c-bg-soft: #29221b;
+  --vp-c-bg-alt: #241e18;
+  --vp-c-bg-elv: #2b241d;
+  --vp-c-text-1: #f3e9db;
+  --vp-c-text-2: #c3b3a0;
+  --vp-c-divider: #3e3328;
+  --vp-code-block-bg: #191410;
+  --mark2-bg: #1e1914;
+  --mark2-card: #272019;
+  --mark2-ink: #f3e9db;
+  --mark2-muted: #c3b3a0;
+  --mark2-accent: #e2a57a;
+  --mark2-tint: #2f251c;
+  --mark2-line: #423529;
+  --mark2-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
 }
 
 .VPNavBarTitle .logo {
@@ -105,14 +109,23 @@ body:has(.mark2-home) .VPFooter {
 .mark2-eyebrow {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   margin: 0 0 22px;
   color: var(--mark2-accent);
   font-size: 11px;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.6;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
+}
+
+.mark2-eyebrow::before {
+  content: '';
+  flex: none;
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.55;
 }
 
 .mark2-hero h1 {
@@ -128,8 +141,9 @@ body:has(.mark2-home) .VPFooter {
 .mark2-section h2 em,
 .mark2-final h2 em {
   color: var(--mark2-accent);
-  font-family: Georgia, 'Times New Roman', serif;
-  font-weight: 400;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
 }
 
 html[lang='zh-CN'] .mark2-home h1 {
@@ -168,31 +182,32 @@ html[lang='zh-CN'] .mark2-home em {
   min-height: 46px;
   padding: 11px 21px;
   border: 1px solid var(--mark2-line);
-  border-radius: 9px;
+  border-radius: 6px;
   font-size: 13px;
   font-weight: 600;
-  transition: background 160ms ease, transform 160ms ease;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .mark2-button-primary {
-  background: #216454;
-  color: #ffffff !important;
-  border-color: #216454;
+  background: #9c4a2d;
+  color: #fff8ef !important;
+  border-color: #9c4a2d;
 }
 
 .mark2-button-primary:hover {
-  background: #184b3e;
-  transform: translateY(-2px);
+  background: #7f3a22;
+  border-color: #7f3a22;
 }
 
 .dark .mark2-button-primary {
-  background: #9dd3b5;
-  border-color: #9dd3b5;
-  color: #173c2b !important;
+  background: #e2a57a;
+  border-color: #e2a57a;
+  color: #2b1c12 !important;
 }
 
 .dark .mark2-button-primary:hover {
-  background: #b0dfc4;
+  background: #edb992;
+  border-color: #edb992;
 }
 
 .mark2-button-secondary {
@@ -224,7 +239,7 @@ html[lang='zh-CN'] .mark2-home em {
   min-height: 40px;
   padding: 8px 17px;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 6px;
   color: var(--mark2-muted);
   font-size: 12px;
   font-weight: 550;
@@ -235,7 +250,7 @@ html[lang='zh-CN'] .mark2-home em {
   border-color: var(--mark2-line);
   background: var(--mark2-card);
   color: var(--mark2-accent);
-  box-shadow: 0 3px 8px rgba(36, 63, 47, 0.04);
+  box-shadow: 0 3px 8px rgba(74, 48, 27, 0.05);
 }
 
 .mark2-tour-tabs button:hover {
@@ -249,7 +264,7 @@ html[lang='zh-CN'] .mark2-home em {
   padding: 10px 18px;
   overflow: hidden;
   border: 1px solid var(--mark2-line);
-  border-radius: 20px;
+  border-radius: 12px;
   background: var(--mark2-tint);
   box-shadow: var(--mark2-shadow);
   cursor: zoom-in;
@@ -272,7 +287,7 @@ html[lang='zh-CN'] .mark2-home em {
   height: 34px;
   place-items: center;
   border: 1px solid var(--mark2-line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: var(--mark2-card);
   color: var(--mark2-accent);
 }
@@ -341,14 +356,14 @@ html[lang='zh-CN'] .mark2-home em {
   flex-direction: column;
   padding: 30px;
   border: 1px solid var(--mark2-line);
-  border-radius: 14px;
+  border-radius: 10px;
   background: var(--mark2-card);
-  transition: border-color 180ms ease, transform 180ms ease;
+  transition: border-color 180ms ease, background 180ms ease;
 }
 
 .mark2-feature-card:hover {
   border-color: var(--mark2-accent);
-  transform: translateY(-3px);
+  background: color-mix(in srgb, var(--mark2-tint) 35%, var(--mark2-card));
 }
 
 .mark2-card-top {
@@ -363,7 +378,7 @@ html[lang='zh-CN'] .mark2-home em {
   width: 42px;
   height: 42px;
   place-items: center;
-  border-radius: 11px;
+  border-radius: 8px;
   background: var(--mark2-tint);
   color: var(--mark2-accent);
 }
@@ -437,7 +452,7 @@ html[lang='zh-CN'] .mark2-home em {
 .mark2-provider-list span {
   padding: 6px 10px;
   border: 1px solid var(--mark2-line);
-  border-radius: 6px;
+  border-radius: 4px;
   color: var(--mark2-muted);
   font-size: 11px;
   background: var(--mark2-card);
@@ -620,15 +635,15 @@ html[lang='zh-CN'] .mark2-home em {
   margin-bottom: 70px;
   padding: 56px 24px;
   border: 1px solid var(--mark2-line);
-  border-radius: 20px;
+  border-radius: 14px;
   background: var(--mark2-tint);
   text-align: center;
 }
 
 .mark2-final > img {
   margin-bottom: 22px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(35, 65, 46, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(74, 48, 27, 0.14);
 }
 
 .mark2-final .mark2-eyebrow {
@@ -696,7 +711,7 @@ html[lang='zh-CN'] .mark2-home em {
   margin: 0;
   padding: 60px 28px 28px;
   border: 0;
-  background: rgba(10, 18, 13, 0.92);
+  background: rgba(24, 18, 13, 0.94);
 }
 
 .mark2-lightbox[open] {
@@ -706,7 +721,7 @@ html[lang='zh-CN'] .mark2-home em {
 }
 
 .mark2-lightbox::backdrop {
-  background: rgba(10, 18, 13, 0.92);
+  background: rgba(24, 18, 13, 0.94);
 }
 
 .mark2-lightbox-image {
@@ -723,15 +738,15 @@ html[lang='zh-CN'] .mark2-home em {
   width: 40px;
   height: 40px;
   place-items: center;
-  border: 1px solid #718678;
+  border: 1px solid #8b7863;
   border-radius: 50%;
-  background: #23382c;
-  color: #ffffff;
+  background: #30251c;
+  color: #fff8ef;
   cursor: pointer;
 }
 
 .mark2-lightbox-close:focus-visible {
-  outline: 3px solid #b0dfc4;
+  outline: 3px solid #e2a57a;
   outline-offset: 3px;
 }
 
@@ -784,11 +799,20 @@ html[lang='zh-CN'] .mark2-home em {
   background: var(--vp-c-brand-soft);
 }
 
+::selection {
+  background: rgba(156, 74, 45, 0.18);
+  color: inherit;
+}
+
+.dark ::selection {
+  background: rgba(226, 165, 122, 0.24);
+}
+
 .mark2-docs-hero {
   margin-bottom: 30px;
   padding: 28px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 14px;
+  border-radius: 10px;
   background: var(--vp-c-bg-soft);
 }
 
@@ -822,7 +846,7 @@ html[lang='zh-CN'] .mark2-home em {
   flex-direction: column;
   padding: 22px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1) !important;
   text-decoration: none !important;
@@ -872,7 +896,7 @@ html[lang='zh-CN'] .mark2-home em {
   width: 100%;
   height: auto;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
+  border-radius: 10px;
   background: var(--vp-c-bg-soft);
 }
 

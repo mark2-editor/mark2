@@ -97,7 +97,7 @@ body:has(.mark2-home) .VPFooter {
 
 .mark2-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   padding-top: 88px;
 }
@@ -113,15 +113,6 @@ body:has(.mark2-home) .VPFooter {
   line-height: 1.6;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-}
-
-.mark2-status-dot {
-  width: 6px;
-  height: 6px;
-  flex: none;
-  border-radius: 50%;
-  background: var(--mark2-accent);
-  box-shadow: 0 0 0 4px var(--mark2-tint);
 }
 
 .mark2-hero h1 {
@@ -210,42 +201,6 @@ html[lang='zh-CN'] .mark2-home em {
   background: var(--mark2-tint);
 }
 
-.mark2-platform-line {
-  margin: 17px 0 0;
-  color: var(--mark2-muted);
-  font-size: 11px;
-  line-height: 1.6;
-}
-
-.mark2-hero-note {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  width: 208px;
-  justify-self: end;
-  padding: 32px 24px;
-  border-top: 1px solid var(--mark2-line);
-  border-bottom: 1px solid var(--mark2-line);
-  color: var(--mark2-muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 14px;
-  line-height: 1.6;
-  letter-spacing: 0.16em;
-  transform: rotate(-5deg);
-}
-
-.mark2-note-rule {
-  width: 42px;
-  height: 3px;
-  margin: 23px 0;
-  background: var(--mark2-accent);
-}
-
-.mark2-note-foot {
-  font-size: 9px;
-  letter-spacing: 0;
-}
-
 .mark2-tour {
   grid-column: 1 / -1;
   min-width: 0;
@@ -318,14 +273,6 @@ html[lang='zh-CN'] .mark2-home em {
   border-radius: 8px;
   background: var(--mark2-card);
   color: var(--mark2-accent);
-}
-
-.mark2-tour-panel > p {
-  margin: 16px 0 0;
-  color: var(--mark2-muted);
-  font-size: 12px;
-  text-align: center;
-  line-height: 1.7;
 }
 
 .mark2-capabilities {
@@ -937,7 +884,6 @@ html[lang='zh-CN'] .mark2-home em {
 @media (max-width: 960px) {
   .mark2-shell { width: calc(100% - 64px); }
   .mark2-hero { grid-template-columns: 1fr; padding-top: 64px; }
-  .mark2-hero-note { display: none; }
   .mark2-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mark2-ai-grid { gap: 40px; }
   .mark2-section { padding-block: 72px; }

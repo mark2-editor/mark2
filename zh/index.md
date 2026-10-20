@@ -16,16 +16,13 @@ import Mark2ProductTour from '../.vitepress/components/Mark2ProductTour.vue'
 <div class="mark2-home">
   <section class="mark2-hero mark2-shell" aria-labelledby="hero-title">
     <div class="mark2-hero-copy">
-      <p class="mark2-eyebrow"><span class="mark2-status-dot" aria-hidden="true"></span>面向 macOS 的 Markdown 编辑器</p>
       <h1 id="hero-title">Markdown 编辑，<br /><em>完整的文档工作流。</em></h1>
       <p class="mark2-hero-lede">在同一个桌面应用中完成可视化编辑、源码修改、AI 辅助和版本管理。使用本地 Markdown 文件，并按需导出适合阅读与分享的格式。</p>
       <div class="mark2-actions">
         <a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer"><Download :size="17" aria-hidden="true" />下载 macOS 版</a>
         <a class="mark2-button mark2-button-secondary" :href="withBase('/zh/docs/getting-started')">快速开始<ArrowRight :size="17" aria-hidden="true" /></a>
       </div>
-      <p class="mark2-platform-line">Apple Silicon 与 Intel · 文件由你掌握</p>
     </div>
-    <div class="mark2-hero-note" aria-hidden="true"><span>MARKDOWN</span><span>可视化 + 源码</span><div class="mark2-note-rule"></div><span class="mark2-note-foot">本地文件 · 标准格式</span></div>
     <Mark2ProductTour locale="zh" />
   </section>
   <div class="mark2-capabilities mark2-shell">

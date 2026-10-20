@@ -16,16 +16,13 @@ import Mark2ProductTour from './.vitepress/components/Mark2ProductTour.vue'
 <div class="mark2-home">
   <section class="mark2-hero mark2-shell" aria-labelledby="hero-title">
     <div class="mark2-hero-copy">
-      <p class="mark2-eyebrow"><span class="mark2-status-dot" aria-hidden="true"></span>Markdown editor for macOS</p>
       <h1 id="hero-title">Write, review, and share<br /><em>with Markdown.</em></h1>
       <p class="mark2-hero-lede">Visual and source editing, optional AI assistance, and version control in one desktop application. Work with local Markdown files and export in the format your readers need.</p>
       <div class="mark2-actions">
         <a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer"><Download :size="17" aria-hidden="true" />Download for macOS</a>
         <a class="mark2-button mark2-button-secondary" :href="withBase('/docs/getting-started')">Get started<ArrowRight :size="17" aria-hidden="true" /></a>
       </div>
-      <p class="mark2-platform-line">Apple Silicon & Intel · Your files stay yours</p>
     </div>
-    <div class="mark2-hero-note" aria-hidden="true"><span>MARKDOWN</span><span>VISUAL + SOURCE</span><div class="mark2-note-rule"></div><span class="mark2-note-foot">Local files. Standard format.</span></div>
     <Mark2ProductTour locale="en" />
   </section>
   <div class="mark2-capabilities mark2-shell">

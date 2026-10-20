@@ -11,9 +11,9 @@ const tabs = ref<HTMLButtonElement[]>([])
 const lightbox = ref<InstanceType<typeof Mark2ImageLightbox> | null>(null)
 const isZh = computed(() => props.locale === 'zh')
 const panels = computed(() => [
-  { label: isZh.value ? '可视化编辑' : 'Visual editor', icon: FileText, file: 'editor', alt: isZh.value ? 'Mark2 可视化编辑器中的 Markdown 文档' : 'A Markdown document in the Mark2 visual editor', caption: isZh.value ? '可视化编辑与 Markdown 源码模式使用同一份文档。' : 'Visual and source editing use the same Markdown document.' },
-  { label: isZh.value ? 'AI 助手' : 'AI assistant', icon: Sparkles, file: 'agent', alt: isZh.value ? 'Mark2 Agent 在文档旁辅助审阅草稿' : 'Mark2 Agent helping review a draft beside the document', caption: isZh.value ? '在文档旁获得改写、总结与翻译帮助。' : 'Rewrite, summarize, and translate with help beside your document.' },
-  { label: isZh.value ? 'Git 版本管理' : 'Git workflow', icon: GitBranch, file: 'git', alt: isZh.value ? 'Mark2 Git 面板中的文件变更和提交记录' : 'File changes and commit history in the Mark2 Git panel', caption: isZh.value ? '在 Git 面板中查看文件差异与提交记录。' : 'Review file changes and commit history in the Git panel.' }
+  { label: isZh.value ? '可视化编辑' : 'Visual editor', icon: FileText, file: 'editor', alt: isZh.value ? 'Mark2 可视化编辑器中的 Markdown 文档' : 'A Markdown document in the Mark2 visual editor' },
+  { label: isZh.value ? 'AI 助手' : 'AI assistant', icon: Sparkles, file: 'agent', alt: isZh.value ? 'Mark2 Agent 在文档旁辅助审阅草稿' : 'Mark2 Agent helping review a draft beside the document' },
+  { label: isZh.value ? 'Git 版本管理' : 'Git workflow', icon: GitBranch, file: 'git', alt: isZh.value ? 'Mark2 Git 面板中的文件变更和提交记录' : 'File changes and commit history in the Mark2 Git panel' }
 ])
 const panel = computed(() => panels.value[active.value])
 const src = computed(() => withBase(`/mark2-${panel.value.file}-${isDark.value ? 'dark' : 'light'}.png`))
@@ -43,7 +43,6 @@ function navigate(event: KeyboardEvent) {
         <img :src="src" :alt="panel.alt" :width="item.file === 'git' ? 1375 : 1275" :height="item.file === 'git' ? 923 : 851" fetchpriority="high" />
         <span class="mark2-tour-expand"><Expand :size="17" aria-hidden="true" /></span>
       </button>
-      <p>{{ item.caption }}</p>
     </div>
     <Mark2ImageLightbox ref="lightbox" :close-label="isZh ? '关闭图片' : 'Close image'" />
   </div>

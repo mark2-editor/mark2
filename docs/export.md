@@ -1,33 +1,67 @@
 ---
 title: Export documents
-description: Export a Mark2 document as PDF, PNG, HTML, or Markdown.
+description: Choose PDF, PNG, HTML, or Markdown, adjust page settings, and check exported documents.
 ---
 
 # Export documents
 
-When your document is ready to share, open **File → Export**. Choose the format that matches what you need:
+Choose **File → Export** to turn your draft into a shareable file. Start with the reader's needs: a fixed page layout, an image, a browser document, or editable Markdown.
 
-- **PDF** — best for printing or sending as a finished document.
-- **PNG** — a picture of the rendered page.
-- **HTML** — a web page you can open in a browser.
-- **Markdown** — an editable text file you can continue working on elsewhere.
+## Choose a format
 
-You can also copy the original Markdown or formatted rich text from the editor menus.
+| Format | Best for | What to check |
+| --- | --- | --- |
+| PDF | Printing and sharing a finished layout | Page breaks, margins, tables, and links |
+| PNG | A rendered image | Image dimensions and readability |
+| HTML | Reading in a browser | Rendering, links, and referenced assets |
+| Markdown | Editing in another tool | Source syntax and image paths |
 
-## Make a PDF
+You can also copy original Markdown or formatted rich text from the editor menus when you only need to transfer content.
 
-PDF export uses the page as you see it in Mark2, including headings, tables, code, images, math, and Mermaid diagrams when they are present.
+## Prepare your document
 
-<Mark2DocImage src="/mark2-export-pdf.png" alt="A PDF exported from Mark2 and opened in Preview." caption="A rendered Mark2 document exported as a PDF with a table of contents." />
+1. Save the latest draft.
+2. Check heading order, image loading, and table width in the visual editor.
+3. Confirm that code, math, and Mermaid diagrams render correctly.
+4. Remove unfinished notes and check any links readers need.
 
-Before exporting, open **Settings → Export** if you want to change:
+Exports depend on the content that can be rendered. Resolve broken images and diagram syntax before exporting.
 
-- Page size: A4, A3, A5, US Letter, or US Legal
-- Top, bottom, left, and right margins
-- An automatic table of contents made from the document headings
+## Configure page settings
 
-Then choose **File → Export → PDF**. Mark2 uses the current file name for the exported file by default.
+Open **Settings → Export** before exporting or printing:
 
-## Which format should I choose?
+- **Page size:** A4, A3, A5, US Letter, or US Legal.
+- **Margins:** set the top, bottom, left, and right margins.
+- **Table of contents:** generate a contents section from document headings.
 
-Use Markdown when you want to keep editing the text. Use PDF when the layout should stay fixed. Use HTML when readers will open the result in a browser, and PNG when a single image is more convenient.
+The table of contents setting is used for PDF, HTML, PNG, and printing. Page settings also affect PDF and PNG output. Heading structure matters: use descriptive section headings in a consistent hierarchy.
+
+## Export a PDF
+
+1. Choose your page settings.
+2. Select **File → Export → PDF**, or press **⌘⇧E**.
+3. Choose the output location and name.
+4. Open the result in Preview and inspect every page.
+
+<Mark2DocImage src="/mark2-export-pdf.png" alt="A PDF exported from Mark2 open in Preview with a generated table of contents." caption="A real Mark2 document exported to PDF and checked in Preview." />
+
+Look for wide tables, long code lines, clipped content, awkward page breaks, and diagrams that need more space. Increase the page size, adjust margins, or simplify the content if necessary.
+
+## Export PNG or HTML
+
+Choose the format in **File → Export** and save the result. Open a PNG in an image viewer or HTML in a browser to check how readers will see it.
+
+For HTML and Markdown, inspect image references before sending the file. A path to an image on your computer may not be available on the reader's computer. Share any required local assets with the document, or use appropriate hosted images.
+
+## Export Markdown
+
+Markdown preserves editable text and syntax rather than a fixed page layout. Use it when someone needs to revise the document or publish it through another Markdown tool.
+
+Check source mode for tool-specific syntax and relative paths. Rendering of extensions such as math and Mermaid depends on the destination tool.
+
+## Print instead of exporting
+
+Use **File → Print** (**⌘⇧P**) when you need the system print workflow. Review the preview and destination before confirming the print job.
+
+For rendering or output problems, see [Export troubleshooting](./troubleshooting#an-export-is-missing-content-or-has-an-unexpected-layout).

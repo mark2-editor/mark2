@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
+import Mark2ImageLightbox from './Mark2ImageLightbox.vue'
 
 const props = withDefaults(defineProps<{
   alt: string
@@ -12,7 +13,9 @@ const props = withDefaults(defineProps<{
   caption: ''
 })
 
-const { isDark } = useData()
+const { isDark, lang } = useData()
+const lightbox = ref<InstanceType<typeof Mark2ImageLightbox> | null>(null)
+const isZh = computed(() => lang.value === 'zh-CN')
 
 const imageSrc = computed(() => {
   const source = isDark.value
@@ -25,7 +28,10 @@ const imageSrc = computed(() => {
 
 <template>
   <figure class="mark2-doc-shot">
-    <img :src="imageSrc" :alt="alt" loading="lazy" />
+    <button type="button" :aria-label="`${isZh ? '放大图片' : 'Enlarge image'}: ${alt}`" @click="lightbox?.open(imageSrc, alt)">
+      <img :src="imageSrc" :alt="alt" loading="lazy" />
+    </button>
     <figcaption v-if="caption">{{ caption }}</figcaption>
+    <Mark2ImageLightbox ref="lightbox" :close-label="isZh ? '关闭图片' : 'Close image'" />
   </figure>
 </template>

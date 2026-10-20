@@ -1,6 +1,6 @@
 ---
-title: Mark2 — 专注写作的 Markdown 编辑器
-description: Mark2 是一款桌面 Markdown 编辑器，支持可视化编辑、AI 辅助、Git 版本管理、本地历史和 PDF 导出。
+title: Mark2 — Markdown 编辑与文档工作流
+description: 面向 macOS 的 Markdown 编辑器，支持可视化与源码编辑、可选 AI 辅助、本地历史、Git 集成，以及 PDF、PNG、HTML 和 Markdown 导出。
 titleTemplate: false
 layout: page
 sidebar: false
@@ -8,99 +8,68 @@ outline: false
 ---
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useData, withBase } from 'vitepress'
-import Mark2ImageLightbox from '../.vitepress/components/Mark2ImageLightbox.vue'
-import Mark2ThemeImage from '../.vitepress/components/Mark2ThemeImage.vue'
-import {
-  ArrowRight,
-  ArrowUpRight,
-  Download,
-  Focus,
-  GitBranch,
-  Sparkles
-} from 'lucide-vue-next'
-
-const lightbox = ref<{ open: (src: string, alt: string) => void } | null>(null)
-const { isDark } = useData()
-
-function openImage(src: string, alt: string) {
-  lightbox.value?.open(src, alt)
-}
-
-function themeImage(darkSrc: string, lightSrc: string) {
-  return withBase(isDark.value ? darkSrc : lightSrc)
-}
+import { withBase } from 'vitepress'
+import { ArrowRight, Download, FileText, GitBranch, History, Palette, ShieldCheck, Sparkles } from 'lucide-vue-next'
+import Mark2ProductTour from '../.vitepress/components/Mark2ProductTour.vue'
 </script>
 
-<div class="mark2-home" id="top">
-  <section class="mark2-hero" aria-labelledby="hero-title">
-    <div class="mark2-hero-glow mark2-hero-glow-one" aria-hidden="true"></div>
-    <div class="mark2-hero-glow mark2-hero-glow-two" aria-hidden="true"></div>
-    <div class="mark2-hero-grid" aria-hidden="true"></div>
+<div class="mark2-home">
+  <section class="mark2-hero mark2-shell" aria-labelledby="hero-title">
     <div class="mark2-hero-copy">
-      <p class="mark2-eyebrow"><span class="mark2-eyebrow-mark" aria-hidden="true"></span> Mark2 Markdown 编辑器</p>
-      <h1 id="hero-title">专注写作的<br />Markdown 编辑器。</h1>
-      <p class="mark2-hero-lede">在一个桌面应用中完成 Markdown 文档的编辑、审阅、版本管理和导出，并在需要时使用 AI 辅助写作。</p>
-      <div class="mark2-hero-actions">
-        <a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer">下载 Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a>
-        <a class="mark2-button mark2-button-quiet" :href="withBase('/zh/docs/')">阅读帮助文档 <ArrowRight :size="16" :stroke-width="1.8" aria-hidden="true" /></a>
+      <p class="mark2-eyebrow"><span class="mark2-status-dot" aria-hidden="true"></span>面向 macOS 的 Markdown 编辑器</p>
+      <h1 id="hero-title">Markdown 编辑，<br /><em>完整的文档工作流。</em></h1>
+      <p class="mark2-hero-lede">在同一个桌面应用中完成可视化编辑、源码修改、AI 辅助和版本管理。使用本地 Markdown 文件，并按需导出适合阅读与分享的格式。</p>
+      <div class="mark2-actions">
+        <a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer"><Download :size="17" aria-hidden="true" />下载 macOS 版</a>
+        <a class="mark2-button mark2-button-secondary" :href="withBase('/zh/docs/getting-started')">快速开始<ArrowRight :size="17" aria-hidden="true" /></a>
       </div>
-      <div class="mark2-platform-line"><span class="mark2-status-dot" aria-hidden="true"></span> 暂时仅支持 macOS</div>
+      <p class="mark2-platform-line">Apple Silicon 与 Intel · 文件由你掌握</p>
     </div>
-    <div class="mark2-hero-preview" aria-label="Mark2 编辑器预览">
-      <div class="mark2-orbit orbit-one" aria-hidden="true"></div>
-      <div class="mark2-orbit orbit-two" aria-hidden="true"></div>
-      <div class="mark2-orbit-node" aria-hidden="true"></div>
-      <div class="mark2-shot-frame">
-        <Mark2ThemeImage class="mark2-product-shot" dark-src="/mark2-editor-dark.png" light-src="/mark2-editor-light.png" alt="Mark2 编辑器展示渲染后的 Markdown 文章。" />
-      </div>
-    </div>
+    <div class="mark2-hero-note" aria-hidden="true"><span>MARKDOWN</span><span>可视化 + 源码</span><div class="mark2-note-rule"></div><span class="mark2-note-foot">本地文件 · 标准格式</span></div>
+    <Mark2ProductTour locale="zh" />
   </section>
-  <section class="mark2-section mark2-features-section" id="features" aria-labelledby="features-title">
-    <h2 class="mark2-visually-hidden" id="features-title">核心功能</h2>
+  <div class="mark2-capabilities mark2-shell">
+    <span><FileText :size="17" aria-hidden="true" />可视化与源码编辑</span>
+    <span><Sparkles :size="17" aria-hidden="true" />自由选择 AI 服务</span>
+    <span><History :size="17" aria-hidden="true" />本地历史与 Git</span>
+    <span><Download :size="17" aria-hidden="true" />PDF、HTML 等多种导出</span>
+  </div>
+  <section class="mark2-section mark2-shell" id="features" aria-labelledby="features-title">
+    <div class="mark2-section-heading"><div><p class="mark2-eyebrow">核心功能</p><h2 id="features-title">覆盖文档编辑、<br />审阅与导出。</h2></div><p>从日常笔记到项目文档，在同一工作区中完成编辑、变更审阅和成果分享。</p></div>
     <div class="mark2-feature-grid">
-      <article class="mark2-feature-card mark2-feature-card-wide mark2-feature-card-focus">
-        <div class="mark2-feature-card-top"><span class="mark2-feature-index">01 / 04</span><span class="mark2-feature-symbol mark2-symbol-focus" aria-hidden="true"><Focus :size="15" :stroke-width="1.6" /></span></div>
-        <h3>可视化编辑，随时切换源码。</h3>
-        <p>在渲染后的页面上写作，需要精确修改时切换到源码模式；标题、列表和表格等格式可使用工具栏完成。</p>
-        <button type="button" class="mark2-feature-shot mark2-feature-shot-editor" aria-label="打开 Mark2 编辑器截图" @click="openImage(themeImage('/mark2-editor-basics-dark.png', '/mark2-editor-light.png'), 'Mark2 编辑器展示渲染后的 Markdown 文档。')"><Mark2ThemeImage dark-src="/mark2-editor-basics-dark.png" light-src="/mark2-editor-light.png" alt="Mark2 编辑器展示渲染后的 Markdown 文档。" /></button>
-      </article>
-      <article class="mark2-feature-card mark2-feature-card-accent">
-        <div class="mark2-feature-card-top"><span class="mark2-feature-index">02 / 04</span><span class="mark2-feature-symbol" aria-hidden="true"><Sparkles :size="15" :stroke-width="1.6" /></span></div>
-        <h3>在编辑器中使用 AI。</h3>
-        <p>用 Agent 改写、总结、翻译和回答文档问题；行内补全则在写作时提供下一句建议。</p>
-        <button type="button" class="mark2-feature-shot" aria-label="打开 Mark2 Agent 截图" @click="openImage(themeImage('/mark2-agent-dark.png', '/mark2-agent-light.png'), 'Mark2 Agent 审阅 Markdown 草稿。')"><Mark2ThemeImage dark-src="/mark2-agent-dark.png" light-src="/mark2-agent-light.png" alt="Mark2 Agent 审阅 Markdown 草稿。" /></button>
-      </article>
-      <article class="mark2-feature-card mark2-feature-card-dark">
-        <div class="mark2-feature-card-top"><span class="mark2-feature-index">03 / 04</span><span class="mark2-feature-symbol" aria-hidden="true"><GitBranch :size="15" :stroke-width="1.6" /></span></div>
-        <h3>在一个面板中管理 Git。</h3>
-        <p>查看 diff、暂存文件、创建提交，并处理分支和远端，不必切换到终端。</p>
-        <button type="button" class="mark2-feature-shot mark2-feature-shot-git" aria-label="打开 Mark2 Git 面板截图" @click="openImage(themeImage('/mark2-git-dark.png', '/mark2-git-light.png'), 'Mark2 Git 面板展示变更和最近提交。')"><Mark2ThemeImage dark-src="/mark2-git-dark.png" light-src="/mark2-git-light.png" alt="Mark2 Git 面板展示变更和最近提交。" /></button>
-      </article>
-      <article class="mark2-feature-card mark2-feature-card-wide mark2-feature-card-export">
-        <div class="mark2-feature-card-top"><span class="mark2-feature-index">04 / 04</span><span class="mark2-feature-symbol" aria-hidden="true"><ArrowUpRight :size="15" :stroke-width="1.6" /></span></div>
-        <div class="mark2-export-copy"><h3>导出 PDF、PNG、HTML 或 Markdown。</h3><p>PDF 会保留标题、表格、代码、数学公式和 Mermaid 图表等内容。</p></div>
-        <button type="button" class="mark2-feature-shot mark2-feature-shot-export" aria-label="打开 PDF 导出截图" @click="openImage(themeImage('/mark2-export-pdf.png', '/mark2-export-pdf.png'), '从 Mark2 导出的 PDF 在 Preview 中打开。')"><Mark2ThemeImage dark-src="/mark2-export-pdf.png" light-src="/mark2-export-pdf.png" alt="从 Mark2 导出的 PDF 在 Preview 中打开。" /></button>
-      </article>
+      <article class="mark2-feature-card"><div class="mark2-card-top"><span class="mark2-feature-icon"><FileText :size="21" :stroke-width="1.6" aria-hidden="true" /></span><span class="mark2-feature-number">01</span></div><h3>可视化与源码编辑</h3><p>在渲染后的页面中编辑标题、列表、表格和图片。需要直接修改 Markdown 语法时，切换到源码模式。</p><a :href="withBase('/zh/docs/editor')">编辑器使用指南<ArrowRight :size="15" aria-hidden="true" /></a></article>
+      <article class="mark2-feature-card"><div class="mark2-card-top"><span class="mark2-feature-icon"><Sparkles :size="21" :stroke-width="1.6" aria-hidden="true" /></span><span class="mark2-feature-number">02</span></div><h3>AI 写作辅助</h3><p>使用 Agent 改写、总结和翻译内容；按需启用行内补全，在写作时获取简短建议。</p><a :href="withBase('/zh/docs/ai')">AI 配置与使用<ArrowRight :size="15" aria-hidden="true" /></a></article>
+      <article class="mark2-feature-card"><div class="mark2-card-top"><span class="mark2-feature-icon"><GitBranch :size="21" :stroke-width="1.6" aria-hidden="true" /></span><span class="mark2-feature-number">03</span></div><h3>Git 版本管理</h3><p>查看差异、暂存变更和创建提交，在 Git 面板中管理分支与已配置的远端。</p><a :href="withBase('/zh/docs/git')">Git 工作流指南<ArrowRight :size="15" aria-hidden="true" /></a></article>
+      <article class="mark2-feature-card"><div class="mark2-card-top"><span class="mark2-feature-icon"><History :size="21" :stroke-width="1.6" aria-hidden="true" /></span><span class="mark2-feature-number">04</span></div><h3>本地文档历史</h3><p>比较已保存的文档快照，将早期版本恢复到草稿，审阅后再保存到磁盘。</p><a :href="withBase('/zh/docs/history')">历史版本与恢复<ArrowRight :size="15" aria-hidden="true" /></a></article>
+      <article class="mark2-feature-card"><div class="mark2-card-top"><span class="mark2-feature-icon"><Download :size="21" :stroke-width="1.6" aria-hidden="true" /></span><span class="mark2-feature-number">05</span></div><h3>多种导出格式</h3><p>导出 PDF、PNG、HTML 或 Markdown，配置纸张大小、页边距和基于标题生成的目录。</p><a :href="withBase('/zh/docs/export')">文档导出指南<ArrowRight :size="15" aria-hidden="true" /></a></article>
+      <article class="mark2-feature-card"><div class="mark2-card-top"><span class="mark2-feature-icon"><Palette :size="21" :stroke-width="1.6" aria-hidden="true" /></span><span class="mark2-feature-number">06</span></div><h3>外观与布局设置</h3><p>选择明亮或深色主题，分别设置正文与代码字体，调整大纲、工具栏和侧边栏布局。</p><a :href="withBase('/zh/docs/appearance')">外观设置指南<ArrowRight :size="15" aria-hidden="true" /></a></article>
     </div>
   </section>
-  <section class="mark2-section mark2-philosophy-section" id="philosophy" aria-labelledby="philosophy-title">
-    <div class="mark2-philosophy-card">
-      <div class="mark2-philosophy-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="mark2-philosophy-copy"><p class="mark2-eyebrow"><span class="mark2-eyebrow-mark" aria-hidden="true"></span> 文档工作流</p><h2 id="philosophy-title">从草稿<br />到最终文件。</h2><p class="mark2-philosophy-compact-copy">在同一个工作区中编写文档、查看历史，并导出可以直接使用的文件。</p></div>
-      <ol class="mark2-workflow-list" aria-label="Mark2 文档工作流">
-        <li class="mark2-workflow-item"><span class="mark2-workflow-index">01</span><strong>编辑</strong><span>可视化编辑与源码模式</span></li>
-        <li class="mark2-workflow-item"><span class="mark2-workflow-index">02</span><strong>修改</strong><span>Agent 与行内补全</span></li>
-        <li class="mark2-workflow-item"><span class="mark2-workflow-index">03</span><strong>审阅</strong><span>本地历史与 Git</span></li>
-        <li class="mark2-workflow-item"><span class="mark2-workflow-index">04</span><strong>导出</strong><span>PDF、PNG、HTML 或 Markdown</span></li>
-      </ol>
-    </div>
+  <section class="mark2-ai-section" aria-labelledby="ai-title">
+    <div class="mark2-shell mark2-ai-grid"><div><p class="mark2-eyebrow">可选的 AI 集成</p><h2 id="ai-title">选择服务商，<br /><em>配置操作权限。</em></h2><p class="mark2-ai-lede">连接 OpenAI、DeepSeek、Anthropic、Gemini 或兼容的自定义服务，分别配置 Agent 和行内补全所用的服务商与模型。</p><div class="mark2-provider-list"><span>OpenAI</span><span>DeepSeek</span><span>Anthropic</span><span>Gemini</span><span>Custom API</span></div></div><div class="mark2-ai-details">
+      <div class="mark2-ai-point"><ShieldCheck :size="20" aria-hidden="true" /><div><h3>按需启用</h3><p>编辑、文件管理与导出无需配置 AI 服务。</p></div></div>
+      <div class="mark2-ai-point"><ShieldCheck :size="20" aria-hidden="true" /><div><h3>文档上下文</h3><p>处理选中的段落，或使用 @ 引用工作区文件。</p></div></div>
+      <div class="mark2-ai-point"><ShieldCheck :size="20" aria-hidden="true" /><div><h3>工具操作权限</h3><p>通过 Default、Plan 或 Auto 模式控制 Agent 的写入操作。</p></div></div>
+      <a class="mark2-privacy-link" :href="withBase('/zh/docs/privacy')">AI 请求会向所选服务发送上下文。了解数据发送范围 →</a>
+    </div></div>
   </section>
-  <section class="mark2-section mark2-final-section" id="download" aria-labelledby="download-title">
-    <h2 id="download-title">从你的下一篇<br /><em>Markdown 文档开始。</em></h2>
-    <div class="mark2-final-actions"><a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer">下载 Mark2 <Download :size="16" :stroke-width="1.8" aria-hidden="true" /></a><a class="mark2-button mark2-button-quiet" :href="withBase('/zh/docs/')">阅读帮助文档 <ArrowRight :size="16" :stroke-width="1.8" aria-hidden="true" /></a></div>
-  </section>
-  <Mark2ImageLightbox ref="lightbox" close-label="关闭图片" />
-  <footer class="mark2-home-footer"><div class="mark2-footer-brand"><span class="mark2-brand-glyph mark2-brand-image" aria-hidden="true"><img :src="withBase('/mark2-icon.png')" alt="" /></span><span>mark2</span></div><div class="mark2-footer-meta"><span>专注写作的 Markdown 编辑器。</span><span>© 2026 Mark2</span></div></footer>
+  <section class="mark2-section mark2-shell" aria-labelledby="workflow-title"><p class="mark2-eyebrow">使用流程</p><h2 id="workflow-title">从文档编辑，<br />到成果导出。</h2><ol class="mark2-workflow">
+    <li><span class="mark2-workflow-number">01</span><h3>新建或打开</h3><p>创建文档，或打开已有文件与文件夹。</p></li>
+    <li><span class="mark2-workflow-number">02</span><h3>编辑与修改</h3><p>使用可视化或源码编辑，按需调用 AI 辅助。</p></li>
+    <li><span class="mark2-workflow-number">03</span><h3>审阅与保存</h3><p>比较本地历史，通过 Git 记录项目变更。</p></li>
+    <li><span class="mark2-workflow-number">04</span><h3>导出与分享</h3><p>选择 PDF、PNG、HTML 或可编辑的 Markdown。</p></li>
+  </ol></section>
+  <section class="mark2-guides-section mark2-shell" aria-labelledby="guides-title"><div class="mark2-section-heading"><div><p class="mark2-eyebrow">使用文档</p><h2 id="guides-title">按任务查阅指南。</h2></div><a class="mark2-text-link" :href="withBase('/zh/docs/')">进入帮助中心<ArrowRight :size="17" aria-hidden="true" /></a></div><div class="mark2-home-guides">
+    <a :href="withBase('/zh/docs/getting-started')"><span>01 / 指南</span><h3>快速开始</h3><p>安装 Mark2，创建文档并导出 PDF。</p><ArrowRight :size="20" aria-hidden="true" /></a>
+    <a :href="withBase('/zh/docs/markdown')"><span>02 / 指南</span><h3>Markdown 示例</h3><p>查阅表格、代码、公式和图表的常用写法。</p><ArrowRight :size="20" aria-hidden="true" /></a>
+    <a :href="withBase('/zh/docs/troubleshooting')"><span>03 / 指南</span><h3>常见问题</h3><p>排查保存、AI、Git 和导出中的常见问题。</p><ArrowRight :size="20" aria-hidden="true" /></a>
+  </div></section>
+  <section class="mark2-section mark2-shell mark2-faq" aria-labelledby="faq-title"><div><p class="mark2-eyebrow">常见问题</p><h2 id="faq-title">安装前须知。</h2></div><div class="mark2-faq-list">
+    <details><summary>支持哪些平台？<span aria-hidden="true">+</span></summary><p>Mark2 暂时仅提供 macOS 版本。请在发布页面下载与你的 Mac 芯片类型匹配的安装包。</p></details>
+    <details><summary>必须使用 AI 吗？<span aria-hidden="true">+</span></summary><p>不需要。编辑、文件管理、本地历史和导出无需配置 AI 服务。AI 功能由你选择是否启用。</p></details>
+    <details><summary>可以打开现有的 Markdown 文件吗？<span aria-hidden="true">+</span></summary><p>可以。你可以打开单个文件，也可以打开包含多篇文档的文件夹。内容依然以 Markdown 保存，方便在其他编辑器中继续使用。</p></details>
+    <details><summary>本地历史和 Git 有什么区别？<span aria-hidden="true">+</span></summary><p>本地历史在这台电脑上保存文档快照；Git 为整个仓库记录提交，并可通过已配置的远端分享这些提交。</p></details>
+  </div></section>
+  <section class="mark2-final mark2-shell" aria-labelledby="download-title"><img :src="withBase('/mark2-icon.png')" alt="" width="64" height="64" /><p class="mark2-eyebrow">下载 Mark2</p><h2 id="download-title">开始使用 Mark2。</h2><p>支持 macOS，提供 Apple Silicon 与 Intel 版本。</p><div class="mark2-actions"><a class="mark2-button mark2-button-primary" href="https://github.com/mark2-editor/mark2/releases/latest" target="_blank" rel="noopener noreferrer"><Download :size="17" aria-hidden="true" />下载 macOS 版</a><a class="mark2-button mark2-button-secondary" :href="withBase('/zh/docs/getting-started')">快速开始<ArrowRight :size="17" aria-hidden="true" /></a></div></section>
+  <footer class="mark2-home-footer mark2-shell"><div><a class="mark2-footer-brand" :href="withBase('/zh/')"><img :src="withBase('/mark2-icon.png')" alt="" width="25" height="25" />Mark2</a><p>面向 macOS 的 Markdown 编辑器。</p></div><nav :aria-label="'帮助文档'"><a :href="withBase('/zh/docs/')">帮助文档</a><a :href="withBase('/zh/docs/privacy')">隐私与 AI</a><a href="https://github.com/mark2-editor/mark2/releases">版本发布</a></nav><span>© 2026 Mark2</span></footer>
 </div>

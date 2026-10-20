@@ -1,44 +1,79 @@
 ---
 title: AI assistant
-description: Configure Mark2 AI, use Agent, and enable inline completion.
+description: Set up providers and models, give Agent useful context, control permissions, and use inline completion.
 ---
 
 # AI assistant
 
-Mark2 has two AI tools: **AI Agent** helps with a complete request, while **inline completion** offers a short suggestion as you write. Both are optional.
+Mark2 has two optional AI tools. **Agent** handles requests such as rewriting, research, and document tasks. **Inline completion** suggests a short continuation while you write.
 
-<Mark2DocImage dark-src="/mark2-agent-dark.png" light-src="/mark2-agent-light.png" alt="Mark2 Agent reviewing a Markdown draft beside the editor." caption="Agent can work beside the document while you keep the draft in view." />
+<Mark2DocImage dark-src="/mark2-agent-dark.png" light-src="/mark2-agent-light.png" alt="Mark2 Agent reviewing a draft in the right sidebar beside the document." caption="Keep your draft in view while asking Agent for help." />
 
-## A quick explanation of the terms
+## Configure a provider and model
 
-- A **provider** is the company or service that supplies the AI.
-- A **model** is the particular AI you choose from that provider.
-- An **API key** is the access key supplied by the provider. Treat it like a password.
+A **provider** is an AI service. A **model** is a particular AI available through that service. An **API key** authenticates your requests; keep it private.
 
-## Set up AI
+1. Open **Settings → AI** and enable AI if it is disabled.
+2. Add a provider: OpenAI, DeepSeek, Anthropic, Gemini, or a custom OpenAI-compatible service.
+3. Enter the provider's API key. Custom services may allow an empty key.
+4. Fetch the model list or add a model available to your account.
+5. Select the Agent provider and model, then test the connection.
 
-Open **Settings → AI**, then:
+For a custom service, enter its API endpoint in the provider configuration. The endpoint and model must match the protocol the service supports. A successful connection test is a useful first check; Agent tool tasks also depend on the model's capabilities.
 
-1. Add a provider.
-2. Enter its API key if it requires one.
-3. Add or discover a model.
-4. Test the connection and select the provider and model you want to use.
+::: info Provider usage
+AI requests use your configured service credentials. Access, quotas, and usage charges are determined by that service. Mark2 editing and export do not require AI setup.
+:::
 
-Mark2 supports OpenAI, DeepSeek, Anthropic, Gemini, and compatible custom services. If you are not sure which option to choose, start with a built-in provider supported by your account.
+## Start with a focused request
 
-## Ask AI Agent for help
+Open the right sidebar, select the AI panel, and describe both the task and the result you want.
 
-Open the AI panel from the editor's right sidebar. You can ask it to rewrite, continue, translate, summarize, explain, or polish text. The current document or a selected passage can give it context.
+| Goal | Example request |
+| --- | --- |
+| Shorten text | “Cut this introduction to two paragraphs. Keep every factual claim.” |
+| Summarize notes | “Summarize these notes as decisions, open questions, and next actions.” |
+| Translate | “Translate this section into English. Keep commands and file names unchanged.” |
+| Improve structure | “Suggest an outline for this guide before making any edits.” |
+| Check clarity | “Find sentences that a new user might misunderstand and explain why.” |
 
-Type `/` to see available commands. Type `@` to choose a file from the workspace as additional context. Agent can also read and search workspace files, or look up information on the web when needed.
+Ask for one focused change first. Review the result for meaning, factual accuracy, and tone before using it.
 
-Mark2 does not silently change your files. It asks before a write operation and lets you review document edits before applying them.
+## Give Agent context
 
-## Get suggestions while writing
+The active document or selected passage can provide context. Type **@** in the prompt to reference workspace files, or **/** to browse available skills such as rewrite, summarize, translate, and proofread.
 
-Open **Settings → AI → Inline completion**, turn it on, and choose:
+Name the intended scope: “Only revise the conclusion” is clearer than “Improve everything.” For long documents, reference the sections or files that matter rather than assuming every detail will fit in the model's context.
 
-- **Auto** — show a suggestion after you pause typing.
-- **Manual** — show a suggestion only when you ask for one.
+Agent can read and search workspace files, and use web tools when available. Referenced text and tool results may become part of the request sent to your provider. Read [Privacy and AI](./privacy).
 
-Suggestions appear as light preview text. Accept them if they help, or continue typing to ignore them. Inline completion follows the Agent provider and model by default; advanced settings can use a different choice.
+## Choose a permission mode
+
+The default for new sessions is configured in AI settings; it can also be changed per session.
+
+| Mode | Tool behavior |
+| --- | --- |
+| **Default** | Read-only tools can run; write tools require confirmation |
+| **Plan** | Read-only work is allowed; write tools are blocked |
+| **Auto** | Write tools can run without individual confirmation, subject to the app's protections |
+
+Use Plan when you want analysis or an outline before changes. In Default, inspect a requested action before approving it. Use Auto only when its wider permission fits your task.
+
+Review proposed document edits in the change view before applying them when that view is offered. Tool permission and reviewing the resulting text are separate parts of the workflow.
+
+## Use inline completion
+
+In **Settings → AI → Inline completion**, enable completion and choose a trigger mode:
+
+- **Auto** requests a suggestion after you pause typing. Adjust the delay to suit your pace.
+- **Manual** requests a suggestion with **⌘J**.
+
+Suggestions appear as ghost text. Press **Tab** to accept, **Esc** to dismiss, or keep typing. Inline completion follows the Agent provider and model by default. Advanced settings let you override these and adjust the maximum suggestion length.
+
+For less background activity, use Manual mode. To stop requests from both AI tools, disable AI in settings.
+
+## When a request fails
+
+Check the selected provider, model, API key, endpoint, network connection, and provider quota. If ordinary chat works but a tool task fails, try a model with the required tool support.
+
+See [AI troubleshooting](./troubleshooting#ai-does-not-respond) for a step-by-step checklist, and [Keyboard shortcuts](./shortcuts#ai-and-navigation) for the relevant keys.

@@ -1,33 +1,74 @@
+---
+title: Git workflow
+description: Review diffs, stage files, commit changes, and work with branches and remotes in Mark2.
+---
+
 # Git workflow
 
-Git is a tool that keeps a record of changes to files. Think of it as a timeline for a folder: you can see what changed, save named checkpoints, and return to an earlier checkpoint when needed. Mark2 puts the common Git actions in a visual panel, so you do not need to use a terminal.
+Git keeps a change history for a folder. Mark2 brings common Git operations into a visual panel so you can review and commit your writing alongside the document.
 
-## A few words you will see
+## Before you begin
 
-| Term       | Plain meaning                                             |
-| :--------- | :-------------------------------------------------------- |
-| Repository | A folder whose changes Git keeps track of                 |
-| Commit     | A named checkpoint of saved changes                       |
-| Branch     | A separate line of work, useful for trying an idea safely |
-| Remote     | Another copy of the repository, often on a server         |
-| Stage      | Choose which changes belong in the next checkpoint        |
+Git must be installed and available to the system. Open a file or folder inside an existing Git repository, then open the **Git** panel. If no repository is detected, verify that you opened the intended folder.
 
-## Get started
+A remote is optional for local commits. Remote actions need a configured remote and working Git credentials; AI credentials do not authenticate Git.
 
-Install Git, then open a folder or file that belongs to a Git repository. If Mark2 says Git cannot be found, Git needs to be installed or made available to the system.
+## Learn the essential terms
 
-Open the **Git** panel to see the current branch, changed files, and staged files. You can then:
+| Term | Meaning |
+| --- | --- |
+| Repository | A folder whose changes Git tracks |
+| Working tree | The files as they currently exist on disk |
+| Diff | A comparison showing what changed |
+| Stage | Select changes for the next commit |
+| Commit | A named checkpoint of staged changes |
+| Branch | A separate line of work |
+| Remote | Another copy of the repository, often hosted online |
 
-1. Open a diff to see exactly what changed.
-2. Stage the files or individual changes you want to keep in the next checkpoint.
-3. Enter a short message and choose **Commit**.
+## Make a focused commit
 
-<Mark2DocImage dark-src="/mark2-git-dark.png" light-src="/mark2-git-light.png" alt="Mark2 Git panel showing changes and recent commits." caption="Review repository changes and recent commits without leaving the editor." />
+1. Save your documents with **⌘S** so Git sees the latest text on disk.
+2. Open the Git panel and select a changed file.
+3. Review the diff. Check for accidental edits or files that should stay private.
+4. Stage the files or changes that belong together.
+5. Enter a message such as `docs: clarify setup steps`.
+6. Choose **Commit** and check that the new entry appears in the history.
 
-Mark2 can use AI to suggest a commit message. You can review and edit it before committing.
+<Mark2DocImage dark-src="/mark2-git-dark.png" light-src="/mark2-git-light.png" alt="The Mark2 Git panel showing staged changes and recent commits." caption="Review changes and create a checkpoint without leaving the editor." />
 
-## Work with branches and a remote copy
+A commit contains staged changes, not every open draft. If you edit a file after staging it, review and stage the new changes too. Mark2 can suggest a commit message with AI when configured; review the suggestion before committing.
 
-Create a branch when you want to try changes without disturbing your main line of work. Later, you can switch branches or merge one branch into another.
+## Work on a branch
 
-If the repository has a remote copy, use **Fetch**, **Pull**, **Push**, or **Sync** to keep the two copies up to date. When Mark2 asks how to combine different changes, **Merge** keeps both lines and adds a new checkpoint; **Rebase** places your changes after the latest remote changes and is more suitable for users who already know Git.
+Create a branch before trying a substantial rewrite. Use a descriptive name such as `revise-installation-guide`, make your changes, and commit them.
+
+Before switching branches, inspect uncommitted changes. Commit or stash work you need to keep, and resolve any Git prompt about conflicting local changes. Switching branches changes the files on disk.
+
+## Work with a remote
+
+| Action | Purpose |
+| --- | --- |
+| Fetch | Download information about remote changes without integrating them |
+| Pull | Fetch and integrate remote changes into the current branch |
+| Push | Upload local commits to the configured remote |
+| Sync | Coordinate incoming and outgoing changes using the panel's selected strategy |
+
+Read the panel's ahead/behind status before syncing. A local commit is not on the remote until it has been pushed successfully.
+
+**Merge** joins lines of work and may create a merge commit. **Rebase** replays local commits on top of another history and changes their identities. Use the strategy your project expects; inspect the operation before applying it to shared work.
+
+## Resolve a conflict
+
+A conflict means Git cannot combine overlapping edits automatically.
+
+1. Open the conflicted file and inspect both versions.
+2. Keep the intended wording and remove conflict markers such as `<<<<<<<`, `=======`, and `>>>>>>>`.
+3. Save the resolved file and stage it.
+4. Continue the operation shown by the Git panel.
+5. Review the finished document before pushing.
+
+## History and recovery
+
+Use commit diffs to understand a previous change. A revert creates a new commit that undoes a previous commit; it is useful when the change has already been shared. Actions that discard working changes remove uncommitted work, so review what will be discarded first.
+
+Use [Local history](./history) for document snapshots and [Git troubleshooting](./troubleshooting#git-is-unavailable-or-a-remote-action-fails) for missing Git, authentication, and identity errors.

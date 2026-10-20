@@ -88,7 +88,7 @@ export default defineConfig({
   base,
   title: 'Mark2',
   titleTemplate: ':title — Mark2',
-  description: 'A calm, capable Markdown editor for focused work.',
+  description: defaultDescriptionEn,
   cleanUrls: true,
   // Repo-facing documents that must not be published as website pages.
   srcExclude: ['**/README.md', '**/README.zh-CN.md', '**/AGENTS.md'],
@@ -156,31 +156,56 @@ export default defineConfig({
     root: {
       label: 'English',
       lang: 'en-US',
-      title: 'Mark2 — A Markdown editor for focused work',
+      title: 'Mark2 — Markdown editing and document workflows',
       description: defaultDescriptionEn,
       themeConfig: {
         nav: [
           { text: 'Features', link: '/#features' },
-          { text: 'Help docs', link: '/docs/' }
+          { text: 'Documentation', link: '/docs/' },
+          { text: 'Download', link: releaseUrl }
         ],
 
         sidebar: [
           {
-            text: 'Help docs',
+            text: 'Documentation',
+            link: '/docs/'
+          },
+          {
+            text: 'Start here',
             items: [
-              { text: 'Overview', link: '/docs/' },
+              { text: 'Getting started', link: '/docs/getting-started' },
+              { text: 'Files and workspaces', link: '/docs/files' }
+            ]
+          },
+          {
+            text: 'Write and edit',
+            items: [
               { text: 'Editor basics', link: '/docs/editor' },
-              { text: 'AI assistant', link: '/docs/ai' },
-              { text: 'Export', link: '/docs/export' },
+              { text: 'Markdown examples', link: '/docs/markdown' },
+              { text: 'AI assistant', link: '/docs/ai' }
+            ]
+          },
+          {
+            text: 'Review and share',
+            items: [
               { text: 'Local history', link: '/docs/history' },
               { text: 'Git workflow', link: '/docs/git' },
-              { text: 'Appearance', link: '/docs/appearance' }
+              { text: 'Export documents', link: '/docs/export' }
+            ]
+          },
+          {
+            text: 'Reference and support',
+            items: [
+              { text: 'Appearance and settings', link: '/docs/appearance' },
+              { text: 'Keyboard shortcuts', link: '/docs/shortcuts' },
+              { text: 'Privacy and AI', link: '/docs/privacy' },
+              { text: 'Troubleshooting', link: '/docs/troubleshooting' }
             ]
           }
         ],
 
         footer: {
-          message: 'Markdown, with intent.',
+          message: 'Markdown editing for macOS.',
           copyright: 'Copyright © 2026 Mark2'
         }
       }
@@ -188,7 +213,7 @@ export default defineConfig({
     zh: {
       label: '简体中文',
       lang: 'zh-CN',
-      title: 'Mark2 — 专注写作的 Markdown 编辑器',
+      title: 'Mark2 — Markdown 编辑与文档工作流',
       description: defaultDescriptionZh,
       markdown: {
         container: {
@@ -204,34 +229,89 @@ export default defineConfig({
         }
       },
       themeConfig: {
+        outline: { label: '本页内容', level: [2, 3] },
+        docFooter: { prev: '上一篇', next: '下一篇' },
+        sidebarMenuLabel: '文档目录',
+        returnToTopLabel: '返回顶部',
+        darkModeSwitchLabel: '切换外观',
+        lightModeSwitchTitle: '切换浅色模式',
+        darkModeSwitchTitle: '切换深色模式',
+        langMenuLabel: '切换语言',
+        skipToContentLabel: '跳转到内容',
         nav: [
           { text: '功能', link: '/zh/#features' },
-          { text: '帮助文档', link: '/zh/docs/' }
+          { text: '使用文档', link: '/zh/docs/' },
+          { text: '下载', link: releaseUrl }
         ],
 
         sidebar: [
           {
-            text: '帮助文档',
+            text: '文档概览',
+            link: '/zh/docs/'
+          },
+          {
+            text: '开始使用',
             items: [
-              { text: '概览', link: '/zh/docs/' },
+              { text: '快速开始', link: '/zh/docs/getting-started' },
+              { text: '文件与工作区', link: '/zh/docs/files' }
+            ]
+          },
+          {
+            text: '编写与编辑',
+            items: [
               { text: '编辑器基础', link: '/zh/docs/editor' },
-              { text: 'AI 助手', link: '/zh/docs/ai' },
-              { text: '导出文档', link: '/zh/docs/export' },
+              { text: 'Markdown 示例', link: '/zh/docs/markdown' },
+              { text: 'AI 助手', link: '/zh/docs/ai' }
+            ]
+          },
+          {
+            text: '审阅与分享',
+            items: [
               { text: '本地历史', link: '/zh/docs/history' },
               { text: 'Git 工作流', link: '/zh/docs/git' },
-              { text: '外观设置', link: '/zh/docs/appearance' }
+              { text: '导出文档', link: '/zh/docs/export' }
+            ]
+          },
+          {
+            text: '参考与支持',
+            items: [
+              { text: '外观与设置', link: '/zh/docs/appearance' },
+              { text: '键盘快捷键', link: '/zh/docs/shortcuts' },
+              { text: '隐私与 AI', link: '/zh/docs/privacy' },
+              { text: '常见问题', link: '/zh/docs/troubleshooting' }
             ]
           }
         ],
 
         footer: {
-          message: 'Markdown，专注表达。',
+          message: '面向 macOS 的 Markdown 编辑器。',
           copyright: 'Copyright © 2026 Mark2'
         }
       }
     }
   },
   themeConfig: {
+    outline: { level: [2, 3] },
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          zh: {
+            translations: {
+              button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
+              modal: {
+                displayDetails: '显示详细内容',
+                resetButtonTitle: '清除搜索',
+                backButtonTitle: '返回',
+                noResultsText: '没有找到相关结果',
+                footer: { selectText: '选择', selectKeyAriaLabel: '回车', navigateText: '切换结果', navigateUpKeyAriaLabel: '向上', navigateDownKeyAriaLabel: '向下', closeText: '关闭', closeKeyAriaLabel: 'Esc' }
+              }
+            }
+          }
+        }
+      }
+    },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/mark2-editor/mark2' }],
     siteTitle: 'Mark2',
     logo: {
       src: '/mark2-icon.png',
